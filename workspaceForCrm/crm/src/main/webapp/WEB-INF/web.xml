@@ -49,6 +49,10 @@
             <param-value>true</param-value>
         </init-param>
     </filter>
+    <filter-mapping>
+        <filter-name>characterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     <filter>
         <filter-name>loginFilter</filter-name>
         <filter-class>com.ys.crm.web.interceptor.LoginFilter</filter-class>

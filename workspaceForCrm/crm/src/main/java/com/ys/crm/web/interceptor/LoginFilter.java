@@ -15,6 +15,7 @@ public class LoginFilter implements javax.servlet.Filter {
         String path = request.getServletPath();
         User user = (User)request.getSession().getAttribute("user");
         if (user != null) {
+
             chain.doFilter(req,resp);
         } else if ("/login.jsp".equals(path)) {
             chain.doFilter(req,resp);

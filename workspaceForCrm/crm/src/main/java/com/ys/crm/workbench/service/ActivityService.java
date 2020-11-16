@@ -10,4 +10,8 @@ public interface ActivityService {
     Map<String, Boolean> save(Activity activity);
 
     PaginationVO<Activity> pageList(Activity activity, String pageNum, String pageSize);
+
+    boolean deleteActivity(String[] param);
+
+    Map<String, Object> getUserListAndActivity(String id);
 }

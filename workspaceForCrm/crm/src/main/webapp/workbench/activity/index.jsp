@@ -85,8 +85,10 @@ request.getContextPath() + "/";
 				}
 			})
 		})
-		//页面加载完毕后触发一个方法
+
+		//页面加载完毕后触发更新市场活动列表方法
 		pageList(1,2);
+
 		//为查询按钮绑定事件，触发pageList方法
 		$("#searchBtn").click(function () {
 			//点击查询按钮的时候，我们应该将搜索框中的信息保存起来，保存在隐藏域中
@@ -111,33 +113,82 @@ request.getContextPath() + "/";
 			if ($xz.length == 0) {
 				alert("请选择需要删除的记录");
 			} else {
-				//同一个key下有多个value的情况，只能使用传统"crm/xxx？key=value&key=value"的形式传递参数，不能使用json，因为json的key不能重复
-				//拼接参数
-				var param = "";
-				$.each($xz, function (index, element) {
-					param += "id=";
-					param += $(element).val() + "&"
-				});
-				param = param.substr(0, param.length - 1);
-				$.ajax({
-					url: "activity/delete.do",
-					data: param,
-					type: "post",
-					dataType: "json",
-					success:function (data) {
-						if (data.success) {
-							//删除成功之后
-							pageList(1, 2);
-						} else {
-
+				//使用confirm()方法用于显示一个带有指定消息和确认及取消按钮的对话框。
+				if (confirm("确定要删除吗")) {
+					//同一个key下有多个value的情况，只能使用传统"crm/xxx？key=value&key=value"的形式传递参数，不能使用json，因为json的key不能重复
+					//拼接参数
+					var param = "";
+					$.each($xz, function (index, element) {
+						param += "id=";
+						param += $(element).val() + "&"
+					});
+					param = param.substr(0, param.length - 1);
+					$.ajax({
+						url: "activity/delete.do",
+						data:param,
+						type: "post",
+						dataType: "json",
+						success:function (data) {
+							if (data.flag) {
+								//删除成功之后
+								pageList(1, 2);
+							} else {
+								alert("删除失败")
+							}
 						}
-					}
+					})
+				}
+			}
+		})
+
+		//为修改按钮绑定事件，打开修改操作的模态窗口
+		$("#editBtn").click(function () {
+
+			$(".time").datetimepicker({
+				minView: "month",
+				language:  'zh-CN',
+				format: 'yyyy-mm-dd',
+				autoclose: true,
+				todayBtn: true,
+				pickerPosition: "bottom-left"
+			});
+
+			var $xz = $("input[name=xz]:checked")
+			if ($xz.length != 1) {
+				alert("请勾选一条记录进行修改")
+			}else {
+				var id = $xz.val();
+				$.ajax({
+				    url: "activity/getUserListAndActivity.do",
+				    data: {
+						"id":id,
+				    },
+				    type: "get",
+				    dataType: "json",
+				    success:function (data) {
+						//data: 用户列表、市场活动单条
+						var html = "";
+						$.each(data.userList, function (index, element) {
+							html+='<option value="'+element.id+'">'+element.name+'</option>'
+						})
+						$("#edit-owner").html(html);
+
+						//处理单条activity
+						$("#edit-id").val(data.activity.id);
+						$("#edit-name").val(data.activity.name);
+						$("#edit-owner").val(data.activity.owner);
+						$("#edit-startDate").val(data.activity.startDate);
+						$("#edit-endDate").val(data.activity.endDate);
+						$("#edit-cost").val(data.activity.cost);
+						$("#edit-description").val(data.activity.description)
+
+						//打开修改模态窗口
+						$("#editActivityModal").modal("show");
+				    }
 				})
 			}
 		})
-	});
-
-
+	})
 
 	function pageList(pageNum, pageSize) {
 
@@ -197,11 +248,9 @@ request.getContextPath() + "/";
 		})
 	}
 
-	
 </script>
 </head>
 <body>
-
 	<input type="hidden" id="hidden-name"/>
 	<input type="hidden" id="hidden-owner"/>
 	<input type="hidden" id="hidden-startDate"/>
@@ -283,42 +332,49 @@ request.getContextPath() + "/";
 				<div class="modal-body">
 				
 					<form class="form-horizontal" role="form">
-					
+
+						<input id="edit-id" type="hidden"/>
+
 						<div class="form-group">
 							<label for="edit-marketActivityOwner" class="col-sm-2 control-label">所有者<span style="font-size: 15px; color: red;">*</span></label>
 							<div class="col-sm-10" style="width: 300px;">
-								<select class="form-control" id="edit-marketActivityOwner">
+								<select class="form-control" id="edit-owner">
 
 								</select>
 							</div>
                             <label for="edit-marketActivityName" class="col-sm-2 control-label">名称<span style="font-size: 15px; color: red;">*</span></label>
                             <div class="col-sm-10" style="width: 300px;">
-                                <input type="text" class="form-control" id="edit-marketActivityName" value="发传单">
+                                <input type="text" class="form-control" id="edit-name" value="发传单">
                             </div>
 						</div>
 
 						<div class="form-group">
 							<label for="edit-startTime" class="col-sm-2 control-label">开始日期</label>
 							<div class="col-sm-10" style="width: 300px;">
-								<input type="text" class="form-control" id="edit-startTime" value="2020-10-10">
+								<input type="text" class="form-control time" id="edit-startDate">
 							</div>
 							<label for="edit-endTime" class="col-sm-2 control-label">结束日期</label>
 							<div class="col-sm-10" style="width: 300px;">
-								<input type="text" class="form-control" id="edit-endTime" value="2020-10-20">
+								<input type="text" class="form-control time" id="edit-endDate">
 							</div>
 						</div>
 						
 						<div class="form-group">
 							<label for="edit-cost" class="col-sm-2 control-label">成本</label>
 							<div class="col-sm-10" style="width: 300px;">
-								<input type="text" class="form-control" id="edit-cost" value="5,000">
+								<input type="text" class="form-control" id="edit-cost">
 							</div>
 						</div>
 						
 						<div class="form-group">
 							<label for="edit-describe" class="col-sm-2 control-label">描述</label>
 							<div class="col-sm-10" style="width: 81%;">
-								<textarea class="form-control" rows="3" id="edit-describe">市场活动Marketing，是指品牌主办或参与的展览会议与公关市场活动，包括自行主办的各类研讨会、客户交流会、演示会、新产品发布会、体验会、答谢会、年会和出席参加并布展或演讲的展览会、研讨会、行业交流会、颁奖典礼等</textarea>
+								<%--文本域textarea：
+									1。一定要以标签对的形式来呈现，正常状态下标签对要紧紧的挨着
+									2。textarea虽然是以标签对的形式来呈现，但是它也是属于表单元素范畴
+									3。所有对textarea的取值和赋值操作，应该统一使用val()方法，而不是使用html
+								--%>
+								<textarea class="form-control" rows="3" id="edit-description"></textarea>
 							</div>
 						</div>
 						
@@ -327,7 +383,7 @@ request.getContextPath() + "/";
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-					<button type="button" class="btn btn-primary" data-dismiss="modal">更新</button>
+					<button type="button" class="btn btn-primary" id="updateBtn">更新</button>
 				</div>
 			</div>
 		</div>
@@ -345,7 +401,7 @@ request.getContextPath() + "/";
 	</div>
 	<div style="position: relative; top: -20px; left: 0px; width: 100%; height: 100%;">
 		<div style="width: 100%; position: absolute;top: 5px; left: 10px;">
-		
+			<%--条件查询文本框--%>
 			<div class="btn-toolbar" role="toolbar" style="height: 80px;">
 				<form class="form-inline" role="form" style="position: relative;top: 8%; left: 5px;">
 				  
@@ -381,14 +437,18 @@ request.getContextPath() + "/";
 				  
 				</form>
 			</div>
+
+			<%--活动创建、修改、删除按钮--%>
 			<div class="btn-toolbar" role="toolbar" style="background-color: #F7F7F7; height: 50px; position: relative;top: 5px;">
 				<div class="btn-group" style="position: relative; top: 18%;">
 				  <button type="button" class="btn btn-primary" id="addBtn"><span class="glyphicon glyphicon-plus"></span> 创建</button>
-				  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editActivityModal"><span class="glyphicon glyphicon-pencil"></span> 修改</button>
+				  <button type="button" class="btn btn-default" id="editBtn"><span class="glyphicon glyphicon-pencil"></span> 修改</button>
 				  <button type="button" class="btn btn-danger" id="deleteBtn"><span class="glyphicon glyphicon-minus"></span> 删除</button>
 				</div>
 				
 			</div>
+
+			<%--活动列表--%>
 			<div style="position: relative;top: 10px;">
 				<table class="table table-hover">
 					<thead>

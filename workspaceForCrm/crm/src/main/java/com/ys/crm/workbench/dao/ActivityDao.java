@@ -12,4 +12,8 @@ public interface ActivityDao {
     List<Activity> getActivityList(Activity activity);
 
     Integer getTotal(Activity activity);
+
+    int deleteActivity(String[] param);
+
+    Activity getActivityById(String id);
 }

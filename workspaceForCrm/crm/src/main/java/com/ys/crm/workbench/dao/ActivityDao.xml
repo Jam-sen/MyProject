@@ -51,4 +51,16 @@
             </if>
         </where>
     </select>
+
+    <delete id="deleteActivity">
+        delete from tbl_activity
+        where id in
+        <foreach collection="array" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="getActivityById" resultType="Activity">
+        select id,name,owner,startDate,endDate,cost,description from tbl_activity where id = #{id}
+    </select>
 </mapper>
