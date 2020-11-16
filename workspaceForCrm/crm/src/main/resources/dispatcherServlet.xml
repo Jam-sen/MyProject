@@ -7,6 +7,8 @@
 
 <!--    springmvc配置文件，负责创建控制器对象、异常处理器对象-->
     <context:component-scan base-package="com.ys.crm.settings.web.controller"/>
+    <context:component-scan base-package="com.ys.crm.workbench.web.controller"/>
+
     <!--视图解析器-->
     <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/W"/>

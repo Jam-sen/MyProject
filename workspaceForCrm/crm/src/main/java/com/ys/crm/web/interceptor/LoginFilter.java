@@ -15,12 +15,10 @@ public class LoginFilter implements javax.servlet.Filter {
         String path = request.getServletPath();
         User user = (User)request.getSession().getAttribute("user");
         if (user != null) {
-            System.out.println("通过");
             chain.doFilter(req,resp);
         } else if ("/login.jsp".equals(path)) {
             chain.doFilter(req,resp);
         } else {
-            System.out.println("过滤");
             response.sendRedirect(request.getContextPath() + "/login.jsp");
         }
     }

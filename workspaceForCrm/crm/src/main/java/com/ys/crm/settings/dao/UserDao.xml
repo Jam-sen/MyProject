@@ -7,4 +7,7 @@
     <select id="login" resultType="user">
         select * from tbl_user where loginAct=#{loginName} and loginPwd = #{loginPwd}
     </select>
+    <select id="getUserList" resultType="user">
+        select *from tbl_user
+    </select>
 </mapper>

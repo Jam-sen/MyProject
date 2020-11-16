@@ -11,12 +11,10 @@ public class MyInterceptor implements HandlerInterceptor {
         Object obj = request.getSession().getAttribute("user");
         String path = request.getServletPath();
         if (obj != null) {
-            System.out.println("放行");
             return true;
         } else if ("/user/login.do".equals(path)) {
             return true;
         } else {
-            System.out.println("拦截");
             response.sendRedirect(request.getContextPath() + "/login.jsp");
             return false;
         }

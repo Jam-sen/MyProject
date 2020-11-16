@@ -5,26 +5,29 @@
 
 <configuration><!--根标签-->
     <!--settings:控制mybatis全局行为-->
-<!--    <settings>
-        &lt;!&ndash;设置mybatis输出日志&ndash;&gt;
+    <settings>
+        <!--设置mybatis输出日志-->
         <setting name="logImpl" value="STDOUT_LOGGING"/>
-    </settings>-->
+    </settings>
 
     <!--设置别名-->
     <typeAliases>
         <!--name:实体类所在的包名(不是实体类的包名也可以)-->
         <package name="com.ys.crm.settings.domain"/>
+        <package name="com.ys.crm.workbench.domain"/>
+        <package name="com.ys.crm.workbench.vo"/>
     </typeAliases>
 
     <!--分页插件-->
-    <!--<plugins>
+    <plugins>
         <plugin interceptor="com.github.pagehelper.PageInterceptor"/>
-    </plugins>-->
+    </plugins>
 
     <mappers>
         <!--告诉 mybatis 要执行的 sql 语句的位置，一个mapper标签指定一个文件的位置
             从类路径开始的路径信息。target/classes(类路径)-->
         <!--<package name="com.ys.dao"/>-->
         <package name="com.ys.crm.settings.dao"/>
+        <package name="com.ys.crm.workbench.dao"/>
     </mappers>
 </configuration>

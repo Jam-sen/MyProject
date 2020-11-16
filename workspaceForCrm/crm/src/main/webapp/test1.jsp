@@ -14,7 +14,20 @@
 <html>
 <head>
     <base href="<%=basePath%>"/>
-    <title>Title</title>
+
+    $.ajax({
+        url: "",
+        data: {
+
+        },
+        type: "",
+        dataType: "",
+        success:function () {
+
+        }
+    })
+    //获取当前用户名
+    ((User) request.getSession().getAttribute("user")).getName()
 </head>
 <body>
 
