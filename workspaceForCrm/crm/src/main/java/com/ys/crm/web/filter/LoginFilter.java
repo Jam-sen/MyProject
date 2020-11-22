@@ -1,12 +1,14 @@
-package com.ys.crm.web.interceptor;
+package com.ys.crm.web.filter;
 
 import com.ys.crm.settings.domain.User;
 
-import javax.servlet.*;
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.net.http.HttpRequest;
 
 public class LoginFilter implements javax.servlet.Filter {
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {

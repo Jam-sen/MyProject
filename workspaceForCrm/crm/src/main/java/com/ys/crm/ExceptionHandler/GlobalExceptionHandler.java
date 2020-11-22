@@ -1,4 +1,4 @@
-package com.ys.crm.settings.web.controller;
+package com.ys.crm.ExceptionHandler;
 
 import com.ys.crm.exception.LoginException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -18,4 +18,13 @@ public class GlobalExceptionHandler {
         map.put("msg", e.getMessage());
         return map;
     }
+
+  /*  @ExceptionHandler
+    public void doException(HttpServletResponse response) {
+        try {
+            response.getWriter().write(JacksonUtil.flagJson(false));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }*/
 }

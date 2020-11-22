@@ -24,13 +24,17 @@ request.getContextPath() + "/";
 
 <script type="text/javascript">
 
-	$(function(){
+	$(function () {
+		//页面加载完毕后触发更新市场活动列表方法
+		pageList(1, 5);
+
+		//添加
 		$("#addBtn").click(function () {
 			//操作模态窗口的方式： 取得需要操作的模态窗口的jquery对象，调用modal方法，为该方法传递参数show：打开模态窗口   hide：隐藏模态窗口
 			//引入时间控件
 			$(".time").datetimepicker({
 				minView: "month",
-				language:  'zh-CN',
+				language: 'zh-CN',
 				format: 'yyyy-mm-dd',
 				autoclose: true,
 				todayBtn: true,
@@ -40,13 +44,13 @@ request.getContextPath() + "/";
 			$.ajax({
 				url: "activity/getUserList.do",
 				type: "get",
-				async:false,
+				async: false,
 				dataType: "json",
 				success: function (data) {
 					//data: 用户数组json
 					var html = "";
 					$.each(data, function (index, element) {
-						html += "<option value='"+element.id+"'>"+element.name+"</option>"
+						html += "<option value='" + element.id + "'>" + element.name + "</option>"
 					});
 					//将拼接的option标签加入select标签中
 					$("#create-owner").html(html)
@@ -59,6 +63,7 @@ request.getContextPath() + "/";
 			$("#createActivityModal").modal("show")
 		})
 
+		//保存
 		$("#saveBtn").click(function () {
 			$.ajax({
 				url: "activity/save.do",
@@ -72,22 +77,30 @@ request.getContextPath() + "/";
 				},
 				type: "post",
 				dataType: "json",
-				success:function (data) {
+				success: function (data) {
 					//data: true/false
 					if (data.success) {
 						$("#activityAddForm")[0].reset();
 						//添加成功后
 						//刷新市场活动信息列表；关闭添加操作的模态窗口
 						$("#createActivityModal").modal("hide");
-					}else{
+
+						/*
+						操作后停留在当前页
+						$("#activityPage").bs_pagination('getOption', 'currentPage')
+
+						操作后维持已经设置好的每页展现的记录数
+						$("#activityPage").bs_pagination('getOption', 'rowsPerPage')
+
+						这两个参数不需要进行任何修改，直接使用即可
+						 */
+						pageList(1, $("#activityPage").bs_pagination('getOption', 'rowsPerPage'));
+					} else {
 						alert("添加市场活动失败")
 					}
 				}
 			})
 		})
-
-		//页面加载完毕后触发更新市场活动列表方法
-		pageList(1,2);
 
 		//为查询按钮绑定事件，触发pageList方法
 		$("#searchBtn").click(function () {
@@ -96,7 +109,7 @@ request.getContextPath() + "/";
 			$("#hidden-owner").val($.trim($("#search-owner").val()))
 			$("#hidden-startDate").val($.trim($("#search-startTime").val()))
 			$("#hidden-endDate").val($.trim($("#search-endTime").val()))
-			pageList(1,2);
+			pageList(1, 2);
 		});
 		//为全选的复选框绑定事件，触发全选操作
 		$("#qx").click(function () {
@@ -125,13 +138,13 @@ request.getContextPath() + "/";
 					param = param.substr(0, param.length - 1);
 					$.ajax({
 						url: "activity/delete.do",
-						data:param,
+						data: param,
 						type: "post",
 						dataType: "json",
-						success:function (data) {
+						success: function (data) {
 							if (data.flag) {
 								//删除成功之后
-								pageList(1, 2);
+								pageList(1, $("#activityPage").bs_pagination('getOption', 'rowsPerPage'));
 							} else {
 								alert("删除失败")
 							}
@@ -146,7 +159,7 @@ request.getContextPath() + "/";
 
 			$(".time").datetimepicker({
 				minView: "month",
-				language:  'zh-CN',
+				language: 'zh-CN',
 				format: 'yyyy-mm-dd',
 				autoclose: true,
 				todayBtn: true,
@@ -156,20 +169,20 @@ request.getContextPath() + "/";
 			var $xz = $("input[name=xz]:checked")
 			if ($xz.length != 1) {
 				alert("请勾选一条记录进行修改")
-			}else {
+			} else {
 				var id = $xz.val();
 				$.ajax({
-				    url: "activity/getUserListAndActivity.do",
-				    data: {
-						"id":id,
-				    },
-				    type: "get",
-				    dataType: "json",
-				    success:function (data) {
+					url: "activity/getUserListAndActivity.do",
+					data: {
+						"id": id,
+					},
+					type: "get",
+					dataType: "json",
+					success: function (data) {
 						//data: 用户列表、市场活动单条
 						var html = "";
 						$.each(data.userList, function (index, element) {
-							html+='<option value="'+element.id+'">'+element.name+'</option>'
+							html += '<option value="' + element.id + '">' + element.name + '</option>'
 						})
 						$("#edit-owner").html(html);
 
@@ -184,11 +197,40 @@ request.getContextPath() + "/";
 
 						//打开修改模态窗口
 						$("#editActivityModal").modal("show");
-				    }
+					}
 				})
 			}
 		})
-	})
+
+		//为更新按钮绑定事件
+		$("#updateBtn").click(function () {
+			if (confirm("您确定要更新吗")){
+				$.ajax({
+					url: "activity/update.do",
+					data: {
+						"id": $.trim($("#edit-id").val()),
+						"owner":$.trim($("#edit-owner").val()),
+						"name":$.trim($("#edit-name").val()),
+						"startDate":$.trim($("#edit-startDate").val()),
+						"endDate":$.trim($("#edit-endDate").val()),
+						"cost":$.trim($("#edit-cost").val()),
+						"description":$.trim($("#edit-description").val()),
+					},
+					type: "post",
+					dataType: "json",
+					success:function (data) {
+						if (data.flag) {
+							alert("更新成功");
+						} else {
+							alert("更新失败");
+						}
+						$("#editActivityModal").modal("hide");
+						pageList($("#activityPage").bs_pagination('getOption', 'currentPage'), $("#activityPage").bs_pagination('getOption', 'rowsPerPage'));
+					}
+				})
+			}
+		});
+	});
 
 	function pageList(pageNum, pageSize) {
 
@@ -218,7 +260,8 @@ request.getContextPath() + "/";
 				$.each(data.dataList,function (index,element) {
 					html += '<tr class="active">';
 					html += '<td><input type="checkbox" name="xz" value='+element.id+' /></td>';
-					html += '<td><a style="text-decoration: none; cursor: pointer;" onclick="window.location.href=\'workbench/activity/detail.jsp\';">'+element.name+'</a></td>';
+					html += '<td><a style="text-decoration: none; cursor: pointer;" ' +
+							'onclick="window.location.href=\'activity/detail.do?id='+element.id+'\';">'+element.name+'</a></td>';
 					html += '<td>'+element.owner+'</td>';
 					html += '<td>'+element.startDate+'</td>';
 					html += '<td>'+element.endDate+'</td>';

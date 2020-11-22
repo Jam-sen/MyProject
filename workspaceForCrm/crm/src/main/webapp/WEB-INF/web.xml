@@ -32,6 +32,11 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+    <!--注册上下文域监听器-->
+    <listener>
+        <listener-class>com.ys.crm.web.listener.SysInitListener</listener-class>
+    </listener>
+
     <!--注册字符集过滤器-->
     <filter>
         <filter-name>characterEncodingFilter</filter-name>
@@ -55,10 +60,11 @@
     </filter-mapping>
     <filter>
         <filter-name>loginFilter</filter-name>
-        <filter-class>com.ys.crm.web.interceptor.LoginFilter</filter-class>
+        <filter-class>com.ys.crm.web.filter.LoginFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>loginFilter</filter-name>
         <url-pattern>*.jsp</url-pattern>
     </filter-mapping>
+
 </web-app>
