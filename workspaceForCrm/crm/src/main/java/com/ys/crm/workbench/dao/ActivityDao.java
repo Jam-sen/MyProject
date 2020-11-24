@@ -4,6 +4,7 @@ import com.ys.crm.workbench.domain.Activity;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 public interface ActivityDao {
     Integer save(Activity activity);
@@ -25,5 +26,5 @@ public interface ActivityDao {
 
     List<Activity> getActivityByName(@Param("aname") String aname,@Param("clueId") String clueId);
 
-    List<Activity> searchByName(String name);
+    List<Activity> searchByName(Map<String, String> name);
 }

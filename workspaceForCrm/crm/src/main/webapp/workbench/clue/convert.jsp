@@ -44,6 +44,25 @@ request.getContextPath() + "/";
 			}
 		});
 		$("#openSearchModalBtn").click(function () {
+			$.ajax({
+				url: "clue/searchByName.do",
+				type: "get",
+				data: "",
+				dataType: "json",
+				success: function (data) {
+					var html = "";
+					$.each(data, function (i, n) {
+						html += '<tr>'
+						html += '<td><input type="radio" name="activity" value="' + n.id + '"/></td>'
+						html += '<td id="'+n.id+'">' + n.name + '</td>'
+						html += '<td>' + n.startDate + '</td>'
+						html += '<td>' + n.endDate + '</td>'
+						html += '<td>' + n.owner + '</td>';
+						html += '</tr>'
+					});
+					$("#activityListBody").html(html);
+				}
+			});
 			$("#searchActivityModal").modal("show");
 		});
 		$("#aname").keydown(function (event) {
@@ -82,10 +101,11 @@ request.getContextPath() + "/";
 		$("#convertBtn").click(function () {
 			//提交请求到后台，执行线索转换的操作，发出传统请求
 			if ($("#isCreateTransaction").prop("checked")) {
-				//需要创建交易
+				//需要创建交易,使用提交表单的形式去发出请求
+				$("#tranForm").submit();
 			} else {
 				//不需要创建交易
-				window.location.href = "clue/convert.do";
+				window.location.href = "clue/convert.do?clueId=${param.id}";
 			}
 		});
 	});
@@ -153,22 +173,22 @@ request.getContextPath() + "/";
 	</div>
 	<div id="create-transaction2" style="position: relative; left: 40px; top: 20px; width: 80%; background-color: #F7F7F7; display: none;" >
 	
-		<form>
+		<form id="tranForm" method="post" action="clue/convert.do">
 		  <div class="form-group" style="width: 400px; position: relative; left: 20px;">
 		    <label for="amountOfMoney">金额</label>
-		    <input type="text" class="form-control" id="amountOfMoney">
+		    <input type="text" class="form-control" id="amountOfMoney" name="money">
 		  </div>
 		  <div class="form-group" style="width: 400px;position: relative; left: 20px;">
 		    <label for="tradeName">交易名称</label>
-		    <input type="text" class="form-control" id="tradeName" value="动力节点-">
+		    <input type="text" class="form-control" id="tradeName" name="name">
 		  </div>
 		  <div class="form-group" style="width: 400px;position: relative; left: 20px;">
 		    <label for="expectedClosingDate">预计成交日期</label>
-		    <input type="text" class="form-control time" id="expectedClosingDate">
+		    <input type="text" class="form-control time" id="expectedClosingDate" name="expectedDate">
 		  </div>
 		  <div class="form-group" style="width: 400px;position: relative; left: 20px;">
 		    <label for="stage">阶段</label>
-		    <select id="stage"  class="form-control">
+		    <select id="stage"  class="form-control" name="stage">
 		    	<option></option>
 		    	<c:forEach items="${applicationScope.stage}" var="stage">
 					<option value="${stage.value}">${stage.text}</option>
@@ -178,8 +198,10 @@ request.getContextPath() + "/";
 		  <div class="form-group" style="width: 400px;position: relative; left: 20px;">
 		    <label for="activity">市场活动源&nbsp;&nbsp;<a href="javascript:void(0);" id="openSearchModalBtn" style="text-decoration: none;"><span class="glyphicon glyphicon-search"></span></a></label>
 		    <input type="text" class="form-control" id="activityName" placeholder="点击上面搜索" readonly>
-			  <input type="hidden" id="activityId"/>
 		  </div>
+			<input type="hidden" id="activityId" name="activityId"/>
+			<input type="hidden" value="${param.id}" name="clueId">
+			<input type="hidden" value="true" name="isCreateTran"/>
 		</form>
 	</div>
 	

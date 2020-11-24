@@ -169,16 +169,15 @@ public class ActivityServiceImpl implements ActivityService {
     @Override
     public List<Activity> getActivityByName(String aname, String clueId) {
         List<Activity> activityList = activityDao.getActivityByName(aname, clueId);
-        for (Activity a :
-                activityList) {
-            System.out.println(a);
-        }
+
         return activityList;
     }
 
     @Override
     public List<Activity> searchByName(String name) {
-        return activityDao.searchByName(name);
+        Map<String, String> map = new HashMap<>();
+        map.put("name", name);
+        return activityDao.searchByName(map);
     }
 
 

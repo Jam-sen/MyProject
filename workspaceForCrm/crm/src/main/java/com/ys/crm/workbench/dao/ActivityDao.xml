@@ -125,6 +125,11 @@
         select a.id, a.name, u.name as owner, a.startDate, a.endDate
         from tbl_activity a join tbl_user u
         on a.owner=u.id
-        where a.name like '%' #{name} '%'
+        <where>
+            <if test="name!='' and name!=null">
+                a.name like '%' #{name} '%'
+            </if>
+        </where>
+
     </select>
 </mapper>
