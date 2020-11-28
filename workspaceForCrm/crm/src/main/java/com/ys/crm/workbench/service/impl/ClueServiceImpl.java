@@ -2,6 +2,7 @@ package com.ys.crm.workbench.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.ys.crm.exception.ConvertException;
+import com.ys.crm.settings.domain.User;
 import com.ys.crm.util.DateTimeUtil;
 import com.ys.crm.util.JacksonUtil;
 import com.ys.crm.util.UUIDUtil;
@@ -86,7 +87,7 @@ public class ClueServiceImpl implements ClueService {
 
     @Override
     @Transactional
-    public void convert(String clueId, Tran tran, String isCreateTran, String userName) throws ConvertException {
+    public void convert(String clueId, Tran tran, String isCreateTran, User user) throws ConvertException {
         Clue clue = clueDao.getClueById(clueId);
         Customer customer = customerDao.getCustomerByName(clue.getCompany());
         if (customer == null) {
@@ -96,7 +97,7 @@ public class ClueServiceImpl implements ClueService {
             customer.setName(clue.getCompany());
             customer.setWebsite(clue.getWebsite());
             customer.setPhone(clue.getPhone());
-            customer.setCreateBy(userName);
+            customer.setCreateBy(user.getName());
             customer.setCreateTime(DateTimeUtil.getSysTime());
             customer.setContactSummary(clue.getContactSummary());
             customer.setNextContactTime(clue.getNextContactTime());
@@ -117,7 +118,7 @@ public class ClueServiceImpl implements ClueService {
         contacts.setEmail(clue.getEmail());
         contacts.setMphone(clue.getMphone());
         contacts.setJob(clue.getJob());
-        contacts.setCreateBy(userName);
+        contacts.setCreateBy(user.getName());
         contacts.setCreateTime(DateTimeUtil.getSysTime());
         contacts.setContactSummary(clue.getContactSummary());
         contacts.setNextContactTime(clue.getNextContactTime());
@@ -133,7 +134,7 @@ public class ClueServiceImpl implements ClueService {
             for (ClueRemark clueRemark : list) {
                 CustomerRemark customerRemark = new CustomerRemark();
                 customerRemark.setId(UUIDUtil.getUUID());
-                customerRemark.setCreateBy(userName);
+                customerRemark.setCreateBy(user.getName());
                 customerRemark.setCreateTime(DateTimeUtil.getSysTime());
                 customerRemark.setEditFlag("0");
                 customerRemark.setCustomerId(customer.getId());
@@ -144,7 +145,7 @@ public class ClueServiceImpl implements ClueService {
                 }
                 ContactsRemark contactsRemark = new ContactsRemark();
                 contactsRemark.setId(UUIDUtil.getUUID());
-                contactsRemark.setCreateBy(userName);
+                contactsRemark.setCreateBy(user.getName());
                 contactsRemark.setCreateTime(DateTimeUtil.getSysTime());
                 contactsRemark.setEditFlag("0");
                 contactsRemark.setContactsId(contacts.getId());
@@ -169,28 +170,27 @@ public class ClueServiceImpl implements ClueService {
         }
 
         if ("true".equals(isCreateTran)) {
-            tran.setOwner(userName);
+            tran.setOwner(user.getId());
             tran.setId(UUIDUtil.getUUID());
             tran.setContactsId(contacts.getId());
             tran.setCustomerId(customer.getId());
-            tran.setCreateBy(userName);
+            tran.setCreateBy(user.getName());
             tran.setCreateTime(DateTimeUtil.getSysTime());
             int count4 = tranDao.createByClue(tran);
             if (count4 != 1) {
                 throw new ConvertException("转换失败6");
-            } else {
-                TranHistory tranHistory = new TranHistory();
-                tranHistory.setCreateBy(userName);
-                tranHistory.setCreateTime(DateTimeUtil.getSysTime());
-                tranHistory.setExpectedDate(tran.getExpectedDate());
-                tranHistory.setStage(tran.getStage());
-                tranHistory.setMoney(tran.getMoney());
-                tranHistory.setTranId(tran.getId());
-                tranHistory.setId(UUIDUtil.getUUID());
-                int count5 = tranHistoryDao.create(tranHistory);
-                if (count5 != 1) {
-                    throw new ConvertException("转换失败7");
-                }
+            }
+            TranHistory tranHistory = new TranHistory();
+            tranHistory.setCreateBy(user.getName());
+            tranHistory.setCreateTime(DateTimeUtil.getSysTime());
+            tranHistory.setExpectedDate(tran.getExpectedDate());
+            tranHistory.setStage(tran.getStage());
+            tranHistory.setMoney(tran.getMoney());
+            tranHistory.setTranId(tran.getId());
+            tranHistory.setId(UUIDUtil.getUUID());
+            int count5 = tranHistoryDao.create(tranHistory);
+            if (count5 != 1) {
+                throw new ConvertException("转换失败7");
             }
         }
         int count6 = clueRemarkDao.deleteByClueId(clueId);

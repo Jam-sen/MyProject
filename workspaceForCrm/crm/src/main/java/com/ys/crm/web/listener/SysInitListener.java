@@ -8,9 +8,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 
 public class SysInitListener implements ServletContextListener {
@@ -26,5 +24,18 @@ public class SysInitListener implements ServletContextListener {
             List<DicValue> list= map.get(key);
             application.setAttribute(key,list);
         }
+
+        //读取阶段与成交可能性的properties文件，并放入application中
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("Stage2Possibility");
+        Enumeration<String> keys = resourceBundle.getKeys();
+        Map<String, String> map1 = new HashMap<>();
+        while (keys.hasMoreElements()) {
+            //阶段
+            String key = keys.nextElement();
+            //可能性
+            String value = resourceBundle.getString(key);
+            map1.put(key, value);
+        }
+        application.setAttribute("pMap",map1);
     }
 }

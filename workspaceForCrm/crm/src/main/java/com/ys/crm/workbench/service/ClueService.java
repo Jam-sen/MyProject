@@ -1,6 +1,7 @@
 package com.ys.crm.workbench.service;
 
 import com.ys.crm.exception.ConvertException;
+import com.ys.crm.settings.domain.User;
 import com.ys.crm.workbench.domain.Clue;
 import com.ys.crm.workbench.domain.Tran;
 
@@ -15,7 +16,7 @@ public interface ClueService {
 
     String bund(String ids, String clueId);
 
-    void convert(String clueId, Tran tran, String isCreateTran, String userName) throws ConvertException;
+    void convert(String clueId, Tran tran, String isCreateTran, User user) throws ConvertException;
 
     Map<String, Object> pageList(String pageNum, String pageSize);
 }

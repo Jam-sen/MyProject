@@ -87,8 +87,8 @@ public class ClueController {
 
     @RequestMapping(value = "/convert.do")
     public String convert(String clueId, String isCreateTran, Tran tran, HttpServletRequest request) throws ConvertException {
-        String userName = ((User) request.getSession().getAttribute("user")).getName();
-        clueService.convert(clueId, tran, isCreateTran,userName);
+        User user = ((User) request.getSession().getAttribute("user"));
+        clueService.convert(clueId, tran, isCreateTran,user);
         return "/workbench/clue/index.jsp";
     }
 

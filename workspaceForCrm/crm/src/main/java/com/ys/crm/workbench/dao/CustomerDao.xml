@@ -24,37 +24,14 @@
         )
     </insert>
 
+    <select id="getCustomerName" resultType="Customer">
+        select *from tbl_customer where name like '%' #{name} '%'
+    </select>
+
+    <insert id="createByTran">
+        insert into tbl_customer (id, owner, name,  createBy, createTime,nextContactTime) values (#{id},#{owner},#{name},#{createBy},#{createTime},#{nextContactTime})
+    </insert>
 </mapper>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

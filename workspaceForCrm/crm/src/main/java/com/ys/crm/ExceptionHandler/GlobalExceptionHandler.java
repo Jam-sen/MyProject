@@ -2,6 +2,7 @@ package com.ys.crm.ExceptionHandler;
 
 import com.ys.crm.exception.ConvertException;
 import com.ys.crm.exception.LoginException;
+import com.ys.crm.exception.TranException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -24,7 +25,7 @@ public class GlobalExceptionHandler {
         return map;
     }
 
-    @ExceptionHandler(value = ConvertException.class)
+    @ExceptionHandler(value = {ConvertException.class, TranException.class})
     public void doConvertException(HttpServletRequest request, HttpServletResponse response, Exception e) {
         request.setAttribute("msg",e.getMessage());
         try {
@@ -35,6 +36,8 @@ public class GlobalExceptionHandler {
             ioException.printStackTrace();
         }
     }
+
+
   /*  @ExceptionHandler
     public void doException(HttpServletResponse response) {
         try {
