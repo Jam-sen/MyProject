@@ -115,6 +115,8 @@
             });
 
             HistoryList();
+
+
         });
 
         function HistoryList() {
@@ -147,7 +149,7 @@
          * @param stage 需要改变的阶段
          * @param i 需要改变的阶段对应的下标
          */
-        function changeStage(listStage, i) {
+        changeStage=function (stage, i) {
             $.ajax({
                 url: "transaction/changeStage.do",
                 data: {
@@ -167,13 +169,13 @@
                         $("#editTime").html(data.tran.editTime);
 
                         //改变阶段成功后，将所有的阶段图标重新判断，重新赋予样式及颜色
-                        //changeIcon(stage, i);
+                        changeIcon(stage, i);
                     }
                 }
             })
         }
 
-        /*function changeIcon(stage, i) {
+        function changeIcon(stage, i) {
             //当前阶段
             var currentStage = stage;
             //当前阶段可能性
@@ -195,7 +197,7 @@
                     $("#" + i).css("color", "#000000");
                 }
                 //遍历后两个
-                for (var i = point; i <<%=stageList%>; i++) {
+                for (var i = point; i <"<%=stageList%>"; i++) {
                     //如果是当前阶段
                     if (i == index) {
                         //红叉
@@ -247,7 +249,7 @@
                     }
                 }
                 //遍历后两个
-                for (var i = point; i <<%=stageList%>; i++) {
+                for (var i = point; i <"<%=stageList%>"; i++) {
                     //黑叉
                     //移除掉原有的样式
                     $("#" + i).removeClass();
@@ -256,7 +258,7 @@
                     //赋予颜色
                     $("#" + i).css("color", "#000000");
                 }
-            }*/
+            }
         }
     </script>
 
@@ -313,7 +315,6 @@
     <%
     } else {
         //黑叉
-
     %>
     <span id="<%=i%>" onclick="changeStage('<%=listStage%>','<%=i%>')"
           class="glyphicon glyphicon-remove mystage"
@@ -321,7 +322,7 @@
           data-content="<%=dicValue.getText()%>" style="color: #000000;"></span>
     -----------
     <%
-        }
+    }
 
         //如果遍历出来可能性不为0，前7个全是黑圈
     } else {

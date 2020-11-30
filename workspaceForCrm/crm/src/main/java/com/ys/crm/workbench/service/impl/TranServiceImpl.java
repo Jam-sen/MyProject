@@ -13,7 +13,9 @@ import com.ys.crm.workbench.service.TranService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class TranServiceImpl implements TranService {
@@ -95,5 +97,16 @@ public class TranServiceImpl implements TranService {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public Map<String, Object> getCharts() {
+        int total = tranDao.getTotal();
+        List<Map<String ,Object>> list = tranDao.getCharts();
+        Map<String, Object> map = new HashMap<>();
+        map.put("dataList", list);
+        map.put("total", total);
+        return map;
+
     }
 }

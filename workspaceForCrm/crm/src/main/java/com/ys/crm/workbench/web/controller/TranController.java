@@ -47,10 +47,10 @@ public class TranController {
         return customerService.getCustomerName(name);
     }
 
-    @RequestMapping(value = "/save.do",method = RequestMethod.POST)
-    public String save(Tran tran,String customerName ,HttpServletRequest request) throws TranException {
-        String createName = ((User)request.getSession().getAttribute("user")).getName();
-        boolean flag = tranService.save(tran, customerName,createName);
+    @RequestMapping(value = "/save.do", method = RequestMethod.POST)
+    public String save(Tran tran, String customerName, HttpServletRequest request) throws TranException {
+        String createName = ((User) request.getSession().getAttribute("user")).getName();
+        boolean flag = tranService.save(tran, customerName, createName);
         if (flag) {
             return "redirect:/workbench/transaction/index.jsp";
         }
@@ -58,16 +58,16 @@ public class TranController {
     }
 
     @RequestMapping(value = "/detail.do")
-    public ModelAndView detail(String tranId,HttpServletRequest request) {
+    public ModelAndView detail(String tranId, HttpServletRequest request) {
         Tran tran = tranService.detail(tranId);
         /*
-        * 处理可能性
-        * 阶段tran.stage
-        * 阶段和可能性之间的对应关系 pMap
-        */
+         * 处理可能性
+         * 阶段tran.stage
+         * 阶段和可能性之间的对应关系 pMap
+         */
         String stage = tran.getStage();
         ServletContext application = request.getServletContext();
-        Map<String ,String > pMap = (Map<String, String>) application.getAttribute("pMap");
+        Map<String, String> pMap = (Map<String, String>) application.getAttribute("pMap");
         String possibility = pMap.get(stage);
         tran.setPossibility(possibility);
         ModelAndView modelAndView = new ModelAndView();
@@ -78,7 +78,7 @@ public class TranController {
 
     @ResponseBody
     @RequestMapping(value = "/getHistoryListByTranId.do")
-    public List<TranHistory> getHistoryListByTranId(String tranId,HttpServletRequest request) {
+    public List<TranHistory> getHistoryListByTranId(String tranId, HttpServletRequest request) {
         Map<String, String> map = (Map<String, String>) request.getServletContext().getAttribute("pMap");
 
         List<TranHistory> list = tranService.getHistoryListByTranId(tranId);
@@ -95,13 +95,18 @@ public class TranController {
         String userName = ((User) request.getSession().getAttribute("user")).getName();
         tran.setEditBy(userName);
         tran.setEditTime(DateTimeUtil.getSysTime());
-        boolean flag = tranService.changeStage(tran,userName);
-        Map<String, String> pMap = (Map<String,String>)request.getServletContext().getAttribute("pMap");
+        boolean flag = tranService.changeStage(tran, userName);
+        Map<String, String> pMap = (Map<String, String>) request.getServletContext().getAttribute("pMap");
         String possibility = pMap.get(tran.getStage());
         tran.setPossibility(possibility);
         Map<String, Object> map = new HashMap<>();
         map.put("flag", flag);
         map.put("tran", tran);
         return map;
+    }
+    @ResponseBody
+    @RequestMapping(value = "/getCharts.do")
+    public Map<String, Object> getCharts() {
+        return  tranService.getCharts();
     }
 }
