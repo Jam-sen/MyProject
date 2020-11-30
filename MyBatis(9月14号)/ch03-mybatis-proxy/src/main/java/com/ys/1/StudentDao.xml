@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ys.dao.StudentDao">
+    <select id="selectStudents" resultType="com.ys.domain.Student">
+        select *from student
+    </select>
+
+    <insert id="insertStudent">
+        insert into student
+        values (#{id}, #{name}, #{emile}, #{age});
+    </insert>
+    <update id="updateStudent">
+        update student
+        set name=#{name},
+            age = #{age},
+            emile = #{emile}
+        where id = #{id};
+    </update>
+
+    <select id="selectStudentById" resultType="java.util.HashMap">
+      select * from student where id = #{id};
+    </select>
+
+    <select id="selectStudentToMultipleConditions" resultType="com.ys.domain.Student">
+        select *from student where name=#{MyName} or age = #{MyAge};
+    </select>
+
+    <select id="selectStudentToJavaClass" resultType="com.ys.domain.Student">
+        select *from student where name=#{name} and age = #{age};
+    </select>
+
+    <select id="selectStudentToPlace" resultType="com.ys.domain.Student">
+        select *from student where name=#{arg1} and age=#{arg0};
+    </select>
+
+    <select id="selectStudentToMap" resultType="com.ys.domain.Student">
+        select *from student where name=#{myname} and age=#{myage};
+    </select>
+    <!--创建resultMap
+        id:自定义的唯一名称，在<select>使用
+        type:期望转为的 java 对象的全限定名称或别名
+    -->
+    <resultMap id="resultMap1" type="com.ys.domain.Student">
+        <!--主键字段使用id标签--><!--column是表中的列名；property是期望转为的java对象的属性名-->
+        <id column="myId" property="id"/>
+        <!--非主键字段使用result标签-->
+        <result column="myName" property="name"/>
+        <result column="myEmile" property="emile"/>
+        <result column="myAge" property="age"/>
+    </resultMap>
+    <!--resultMap：resultMap标签中的id属性-->
+    <select id="selectUseResultMap" resultMap="resultMap1">
+        select id as myId,name as myName,emile as myEmile,age as myAge
+        from student where id = #{id}
+    </select>
+<!--=================================动态sql==================================-->
+    <select id="selectStudentIf" resultType="com.ys.domain.Student">
+        select * from student
+        where 1=1
+        <if test="name != null and name!='' ">
+            and name = #{name}
+        </if>
+        <if test="age &gt; 0">
+            and age &gt; #{age}
+        </if>
+    </select>
+
+    <select id="selectStudentWhere" resultType="com.ys.domain.Student">
+        select * from student
+        <where>
+            <if test="name != null and name!='' ">
+                and name= #{name}
+            </if>
+            <if test="age &gt; 20">
+                and age &gt; #{age}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectStudentForeach" resultType="com.ys.domain.Student">
+        <if test="list!=null and list.size!=0">
+            select *from student
+        where id in
+            <foreach collection="list" item="id" open="(" close=")" separator=",">
+                #{id}
+            </foreach>
+        </if>
+    </select>
+
+    <select id="selectStudentForeach2" resultType="com.ys.domain.Student">
+        select *from student
+        <if test="list!=null and list.size!=0">
+            where id in
+            <foreach collection="list" item="student" open="(" close=")" separator=",">
+                #{student.id}
+            </foreach>
+        </if>
+    </select>
+
+    <sql id="sql1" >
+        select *from student
+    </sql>
+    <select id="selectStudentSqlFragment" resultType="com.ys.domain.Student">
+        <include refid="sql1"/>
+        where id =#{id}
+    </select>
+    <select id="selectStudents" resultType="com.ys.domain.Student">
+        select *from tbl_student
+    </select>
+</mapper>

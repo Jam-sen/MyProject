@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--组件扫描器-->
+    <context:component-scan base-package="com.ys.controller"/>
+    <!--注册视图解析器：帮助我们处理视图的路径和扩展名。生成视图对象-->
+    <!--注册内部资源视图解析器InternalResourceViewResolver-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--前缀：视图文件的路径-->
+        <property name="prefix" value="/WEB-INF/view/" />
+        <!--后缀：视图文件的扩展名-->
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <!--声明mvc的注解驱动-->
+    <mvc:annotation-driven/>
+
+    <!--当dispatcherServlet的url-pattern为"/"时，所有静态资源的请求也给dispatcherServlet处理，但他没有处理静态资源的能力，对此情况有2种处理方式：
+        第一种处理静态资源的方式：
+        需要在springMVC配置文件中加入<mvc:default-servlet-handler>
+        原理是：加入这个标签后，框架会创建一个控制器对象。DefaultServletHttpRequestHandler（类似我们自己创建的MyController）
+        DefaultServletHttpRequest这个对象可以把接收的请求转发给tomcat的default这个servlet。
+        注意：<mvc:default-servlet-handler/>和@RequestMapping注解有冲突，需要加入<mvc:annotation-driven/>（注解驱动）解决问题。
+     -->
+    <mvc:default-servlet-handler/>
+</beans>

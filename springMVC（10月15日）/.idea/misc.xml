@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../springMVC（10月15日/ch07-ssm" />
+    <file type="web" url="file://$PROJECT_DIR$/ch01-hello-springMVC" />
+    <file type="web" url="file://$PROJECT_DIR$/ch02-requestMapping" />
+    <file type="web" url="file://$PROJECT_DIR$/ch03-recevieParam" />
+    <file type="web" url="file://$PROJECT_DIR$/ch04-return" />
+    <file type="web" url="file://$PROJECT_DIR$/ch05-url-pattern" />
+    <file type="web" url="file://$PROJECT_DIR$/ch06-path" />
+    <file type="web" url="file://$PROJECT_DIR$/ch07-ssm" />
+    <file type="web" url="file://$PROJECT_DIR$/ch08-forward-redirect" />
+    <file type="web" url="file://$PROJECT_DIR$/ch09-exception-handler" />
+    <file type="web" url="file://$PROJECT_DIR$/ch10-interceptor" />
+    <file type="web" url="file://$PROJECT_DIR$/ch11-interceptor2" />
+    <file type="web" url="file://$PROJECT_DIR$/ch12-interceptor-permission" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/ch01-hello-springMVC/pom.xml" />
+        <option value="$PROJECT_DIR$/ch02-requestMapping/pom.xml" />
+        <option value="$PROJECT_DIR$/ch03-recevieParam/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04-return/pom.xml" />
+        <option value="$PROJECT_DIR$/ch05-url-pattern/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06-path/pom.xml" />
+        <option value="$PROJECT_DIR$/../springMVC（10月15日/ch07-ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/ch07-ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/ch08-forward-redirect/pom.xml" />
+        <option value="$PROJECT_DIR$/ch09-exception-handler/pom.xml" />
+        <option value="$PROJECT_DIR$/ch10-interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/ch11-interceptor2/pom.xml" />
+        <option value="$PROJECT_DIR$/ch12-interceptor-permission/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

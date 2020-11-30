@@ -1,0 +1,7 @@
+com/ys/domain/Sale.class
+com/ys/dao/SaleDao.class
+com/ys/domain/Goods.class
+com/ys/dao/GoodsDao.class
+com/ys/service/impl/ServiceImpl.class
+com/ys/service/Service.class
+com/ys/exception/NotEnoughException.class

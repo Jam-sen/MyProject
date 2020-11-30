@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ch08-spring-trans" />
+        <module name="ch06-aop-aspectJ" />
+        <module name="ch07-spring-mybatis" />
+        <module name="ch02-di-xml" />
+        <module name="ch01-hello-spring" />
+        <module name="ch09-spring-trans-anno" />
+        <module name="ch11-spring-web" />
+        <module name="ch03-di-anno" />
+        <module name="ch05-aop-deadin" />
+        <module name="ch04-homework" />
+        <module name="ch10-spring-trans-aspectJ" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ch01-hello-spring" target="13" />
+      <module name="ch02-di-xml" target="13" />
+      <module name="ch03-di-anno" target="13" />
+      <module name="ch04-homework" target="13" />
+      <module name="ch05-aop-deadin" target="1.7" />
+      <module name="ch06-aop-aspectJ" target="13" />
+      <module name="ch07-spring-mybatis" target="11" />
+      <module name="ch08-spring-trans" target="13" />
+      <module name="ch08-spring-trans (1)" target="13" />
+      <module name="ch09-spring-trans-anno" target="13" />
+      <module name="ch10-spring-trans-aspectJ" target="11" />
+      <module name="ch11-spring-web" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

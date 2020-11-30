@@ -1,0 +1,17 @@
+ch04-return：处理器方法的返回值表示请求的处理结果
+    1。modelAndView：有数据和视图，对视图执行的是forward
+    2。String：表示视图，可以是逻辑名称，也可以是完成的视图路径
+    3。void：不能表示数据，也不能表示视图。
+            在处理ajax的时候，可以使用void返回值。通过HttpServletResponse输出数据。响应ajax请求
+            （ajax请求服务器端返回的就是数据，和视图无关）
+    4。Object：例如String、Integer、Map、List、Student等等都是对象，对象有属性，属性就是数据，所以返回Object表示数据，何视图无关。可以使用对象表示的数据，响应ajax请求。
+        现在做ajax，主要使用json的数据格式。实现步骤：
+        1。加入处理json的工具库依赖，springMvc默认使用的jackson
+        2。在Spring配置文件中加入<mvc:annotation-driven>标签，注解驱动。作用是将java对象转化为json对象
+               json = objectMapping。writeValueAsString(Student);
+        3.在处理器方法的上面加入@ResponseBody注解
+              这个注解完成的功能是做输出：
+                response.setContentType("application/json;charset=utf-8");
+                PrintWriter writer = response.getWriter();
+                writer.println(json);
+

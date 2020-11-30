@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ys.dao.StudentDao">
+    <select id="selectStudents" resultType="map">
+        select id,name,age from tbl_student
+    </select>
+    <insert id="insertStudent">
+        insert into tbl_student (id,name,age)values(#{id},#{name},#{age})
+    </insert>
+    <select id="selectById" resultType="com.ys.domain.Student">
+        select id,name,age from tbl_student where id=#{id}
+    </select>
+
+    <select id="selectStudentClass" resultType="map">
+        select s.name as sname , c.name as cname
+        from tbl_student s join tbl_classroom c
+        on s.classroomId=c.id
+    </select>
+    <select id="selectStudentClass2" resultType="com.ys.vo.StudentAndClassVo">
+        select
+        s.name as sName,c.name as cName
+        from tbl_classroom c join tbl_student s
+        on c.id=s.classroomId
+        where s.name like '%张%'  and address like '%e%'
+
+    </select>
+</mapper>
