@@ -9,7 +9,7 @@ public class UserServiceImpl implements UserService {
     public User queryUserById(Integer id) {
         User user = new User();
         user.setAge(21);
-        user.setId(UUIDUtil.getUUID());
+        user.setId(id);
         user.setUserName("张三");
         return user;
     }
