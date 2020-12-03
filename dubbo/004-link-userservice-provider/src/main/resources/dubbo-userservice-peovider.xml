@@ -10,5 +10,5 @@
     <!--暴漏服务接口-->
     <dubbo:service interface="com.ys.service.UserService" ref="userService" registry="N/A"/>
     <!--加载业务接口的实现类到spring容器中-->
-    <bean id="userService" class="com.ys.service.impl.UserServiceImpl" />
+    <bean id="userService" class="com.ys.service.impl.UserServiceImpl1" />
 </beans>
