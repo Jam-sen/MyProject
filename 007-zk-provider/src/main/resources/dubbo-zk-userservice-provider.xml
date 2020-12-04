@@ -16,5 +16,5 @@
     <dubbo:service interface="com.ys.service.UserService" ref="userServiceImpl" />
 
     <!--加载接口实现类-->
-    <bean id="userServiceImpl" class="com.ys.service.impl.UserServiceImpl1"/>
+    <bean id="userServiceImpl" class="com.ys.service.impl.UserServiceImpl"/>
 </beans>

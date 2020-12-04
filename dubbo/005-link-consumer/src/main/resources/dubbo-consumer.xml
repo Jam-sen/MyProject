@@ -5,6 +5,11 @@
 
     <!--声明服务消费者名称：保证唯一性-->
     <dubbo:application name="005-link-consumer"/>
-    <!--引用远程接口服务-->
+
+    <!--引用服务接口
+        id:远程服务接口对象的名称
+        interface：调用远程接口的全限定类名
+        url：访问服务接口的地址
+        registry：不使用注册中心，值为N/A -->
     <dubbo:reference id="userService" interface="com.ys.service.UserService" registry="N/A" url="dubbo://localhost:20880"/>
 </beans>

@@ -5,10 +5,18 @@
 
     <!--声明dubbo服务提供者名称：保证唯一性-->
     <dubbo:application name="004-link-userservice-provider"/>
-    <!--设置dubbo使用的协议和端口号-->
+
+    <!--访问服务协议的名称及端口号，dubbo官方推荐使用的是dubbo协议，端口号默认是20880-->
+    <!--name:指定协议名称
+        port：指定协议端口号-->
     <dubbo:protocol name="dubbo" port="20880"/>
-    <!--暴漏服务接口-->
+
+    <!--暴漏服务接口：dubbo：service
+        interface:暴漏服务接口的全限定类名
+        ref：接口引用的实现类在spring容器中的标识
+        registry：如果不实用注册中心，则值为：N/A -->
     <dubbo:service interface="com.ys.service.UserService" ref="userService" registry="N/A"/>
-    <!--加载业务接口的实现类到spring容器中-->
-    <bean id="userService" class="com.ys.service.impl.UserServiceImpl1" />
+
+    <!--将接口的实现类加载到spring容器中-->
+    <bean id="userService" class="com.ys.service.impl.UserServiceImpl" />
 </beans>
