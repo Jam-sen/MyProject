@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var vm = new Vue({
+                el: "#div1",
+                //Madel:数据
+                data: {
+                    message: "vue",
+
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <span id="div1" v-bind:title="message">
+
+    </span>
+</body>
+</html>
