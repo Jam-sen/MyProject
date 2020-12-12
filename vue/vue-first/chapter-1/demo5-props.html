@@ -10,21 +10,21 @@
             var vm = new Vue({
                 el: "#div1",
                 data: {
-                    message: "加油！加油！"
+                    items: ["java","linux","spring"]
                 },
-                //方法必须定义在Vue的Method对象中
-                methods: {
-                    sayHi: function () {
-                        alert(this.message)
-                    }
-                }
+            });
+
+            //定义一个vue组件（模版）component
+            Vue.component("YS", {
+                props: ['ys'],
+                template: '<li>{{ys}}</li>'
             });
         });
     </script>
 </head>
 <body>
-    <span id="div1" v-bind:title="message">
-        <button v-on:click="sayHi">sayHi</button>
+    <span id="div1" >
+        <YS v-for="item in items" v-bind:ys="item">{{item}}</YS>
     </span>
 </body>
 </html>

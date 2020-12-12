@@ -5,26 +5,26 @@
     <title>Title</title>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script type="text/javascript">
         $(function () {
             var vm = new Vue({
                 el: "#div1",
-                data: {
-                    message: "加油！加油！"
-                },
-                //方法必须定义在Vue的Method对象中
-                methods: {
-                    sayHi: function () {
-                        alert(this.message)
-                    }
+                mounted() {//钩子函数
+                    axios.get('data.json').then()
                 }
+            });
+
+            //定义一个vue组件（模版）component
+            Vue.component("YS", {
+                props: ['ys'],
+                template: '<li>{{ys}}</li>'
             });
         });
     </script>
 </head>
 <body>
-    <span id="div1" v-bind:title="message">
-        <button v-on:click="sayHi">sayHi</button>
+    <span id="div1" >
     </span>
 </body>
 </html>

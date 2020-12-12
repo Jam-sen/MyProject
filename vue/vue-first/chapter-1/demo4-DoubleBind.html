@@ -10,21 +10,22 @@
             var vm = new Vue({
                 el: "#div1",
                 data: {
-                    message: "加油！加油！"
+                    message: "加油！加油！",
+                    select: "B"
                 },
-                //方法必须定义在Vue的Method对象中
-                methods: {
-                    sayHi: function () {
-                        alert(this.message)
-                    }
-                }
             });
         });
     </script>
 </head>
 <body>
     <span id="div1" v-bind:title="message">
-        <button v-on:click="sayHi">sayHi</button>
+        <input type="text" v-model="message">  {{message}}
+        <select v-model="select">
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        {{select}}
     </span>
 </body>
 </html>

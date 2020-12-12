@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="010-zk-multi-consumer:war">
+    <output-path>$PROJECT_DIR$/../010-zk-multi-consumer/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>010-zk-multi-consumer</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="010-zk-multi-consumer-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="010-zk-multi-consumer:war exploded" />
+    </root>
+  </artifact>
+</component>

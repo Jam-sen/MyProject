@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../007-zk-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../007-zk-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../008-zk-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../008-zk-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../009-zk-userservice-multi-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../009-zk-userservice-multi-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../010-zk-multi-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../010-zk-multi-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/001-link-userService-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/001-link-userService-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/002-link-usersevice-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/002-link-usersevice-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/003-link-interface/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/003-link-interface/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/004-link-userservice-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/004-link-userservice-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/005-link-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/005-link-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/006-zk-interface/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/006-zk-interface/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

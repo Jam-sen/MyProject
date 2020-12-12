@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="001-link-userService-provider" />
+        <module name="008-zk-consumer" />
+        <module name="009-zk-userservice-multi-provider" />
+        <module name="007-zk-provider" />
+        <module name="002-link-usersevice-consumer" />
+        <module name="004-link-userservice-provider" />
+        <module name="005-link-consumer" />
+        <module name="010-zk-multi-consumer" />
+        <module name="006-zk-interface" />
+        <module name="003-link-interface" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="001-link-userService-provider" target="11" />
+      <module name="002-link-usersevice-consumer" target="11" />
+      <module name="003-link-interface" target="11" />
+      <module name="004-link-userservice-provider" target="11" />
+      <module name="005-link-consumer" target="11" />
+      <module name="006-zk-interface" target="11" />
+      <module name="007-zk-provider" target="11" />
+      <module name="008-zk-consumer" target="11" />
+      <module name="009-zk-userservice-multi-provider" target="11" />
+      <module name="010-zk-multi-consumer" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
