@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>URL路径表达式</title>
+</head>
+<body>
+<h1>URL路径表达式：@{...}</h1><br>
+<h2>a标签中绝对路径（没有参数）</h2><br>
+<a href="http://www.baidu.com">传统写法，跳转至百度</a><br>
+<a th:href="@{http://www.baidu.com}">路径表达式写法，跳转到百度</a><br><br>
+<a href="http://localhost:8080/user/detail">传统写法，跳转到/user/detail</a><br>
+<a th:href="@{http://localhost:8080/user/detail}">路径表达式写法，跳转到/user/detail</a><br><br>
+
+<h2>URL路径表达式，相对路径[没有参数]（实际开发中推荐使用）</h2>
+<a th:href="@{/user/detail}">路径表达式相对路径，跳转至/user/detail</a><br>
+
+<h2>绝对路径（带参数）</h2>
+<a href="http://localhost:8080/user/test?name=zhangsan">传统写法，访问绝对路径，并带参数：name</a><br>
+<a th:href="@{http://localhost:8080/user/test?name=zhangsan}">路径表达式写法，访问绝对路径，并带参数：name</a>
+
+<h2>相对路径（带参数）</h2>
+<a href="/user/test?name=lisi">传统写法，访问相对路径，并带参数：name</a><br>
+<a th:href="@{/user/test?name=lisi}">路径表达式写法，访问相对路径，并带参数：name</a><br>
+
+<h2>相对路径（带参数：后台获取的参数值）</h2>
+<a th:href="@{'/user/test?name='+${user.name}}">相对路径：获取后台参数值</a>
+
+<h2>相对路径（带多个参数）</h2>
+<a th:href="@{'/user/test1?id='+${user.id}+'&name='+${user.name}+'&age='+${user.age}}">相对路径：获取后台多个参数值</a><br>
+<a th:href="@{/user/test1(id=${user.id},name=${user.name},age=${user.age})}">@{}相对路径：获取后台多个参数值(推荐使用这种方式)</a>
+
+<h2>相对路径（带多个参数）(RESTful风格)</h2>
+<a th:href="@{'/user/test2/'+${user.id}+'/'+${user.name}+'/'+${user.age}}">相对路径：获取后台多个参数值（RESTful风格）</a>
+</body>
+</html>

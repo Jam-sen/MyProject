@@ -1,0 +1,1 @@
+1.springboot项目的代码必须放到Application类（项目启动入口类），所在的同级目录或下级目录

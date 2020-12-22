@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+
+<h1>从session中获取值,三种方式</h1>
+<span th:text="${#session.getAttribute('address')}"></span><br>
+<span th:text="${#httpSession.getAttribute('address')}"></span><br>
+<span th:text="${session.address}"></span><br>
+<span th:text="${#session.getAttribute('user')}"></span>
+
+<script type="text/javascript" th:inline="javascript">
+    //通过request对象获取协议名
+    var scheme = [[${#request.getScheme()}]];
+    var serverName = [[${#request.getServerName()}]];
+    var serverPort = [[${#request.getServerPort()}]];
+    var contextPath = [[${#request.getContextPath()}]];
+    var requestPath =scheme+'://'+serverName+":"+serverPort+contextPath
+    alert(requestPath);
+    var requestURL = [[${#request.requestURL}]];
+    alert(requestURL);
+    /*queryString:请求参数*/
+    var queryString = [[${#request.queryString}]];
+    alert(queryString);
+    var requestAddress = requestURL +"?"+ queryString;
+    alert(requestAddress);
+</script>
+</body>
+</html>

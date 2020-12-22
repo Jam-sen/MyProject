@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>UserDetail</title>
+</head>
+<body>
+<h1>标准变量表达式：${}  （推荐）</h1>
+<h1 th:text="${user.id}"></h1>
+<h1 th:text="${user.name}"></h1>
+<h1 th:text="${user.age}"></h1><br><br>
+
+<!--使用*{},需要先在父标签中使用th:object属性来绑定这个对象，然后在子标签中使用*来代替绑定的对象${user}-->
+<h1>选择变量表达式(星号表达式)：*{}  (不推荐)</h1>
+<div th:object="${user}">
+    用户编号：<h2 th:text="*{id}"></h2>
+    用户姓名：<h2 th:text="*{name}"></h2>
+    用户年龄：<h2 th:text="*{age}"></h2>
+</div>
+
+<h1>标准变量表达式与选择变量表达式的混合使用（不推荐）</h1>
+用户编号:<span th:text="*{user.id}"></span>
+用户姓名：<span th:text="*{user.name}"></span>
+用户年龄：<span th:text="*{user.age}"></span>
+</body>
+</html>
