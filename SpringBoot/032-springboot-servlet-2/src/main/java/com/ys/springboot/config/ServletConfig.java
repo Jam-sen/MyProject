@@ -12,6 +12,8 @@ public class ServletConfig {
     //@Bean是一个方法级别上的注解，主要用在配置类中，相当于一个<beans></beans>标签
     @Bean
     public ServletRegistrationBean myServletRegistrationBean() {
-        return new ServletRegistrationBean(new MyServlet(), "/myServlet");
+        ServletRegistrationBean servletRegistrationBean = new
+                ServletRegistrationBean(new MyServlet(), "/myServlet");
+        return servletRegistrationBean;
     }
 }

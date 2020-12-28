@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>050-springboot-parent</artifactId>
-		<groupId>org.ys.springboot</groupId>
+		<groupId>com.ys.springboot</groupId>
 		<version>1.0-SNAPSHOT</version>
 		<relativePath>../050-springboot-parent/pom.xml</relativePath>
 	</parent>
@@ -47,7 +47,7 @@
 		</dependency>
 		<!--接口工程-->
 		<dependency>
-			<groupId>org.ys.springboot</groupId>
+			<groupId>com.ys.springboot</groupId>
 			<artifactId>051-springboot-dubbo-ssm-interface</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
@@ -82,7 +82,7 @@
 			<resource>
 				<directory>src/main/resources</directory>
 				<includes>
-					<include>**/*.xml</include>
+					<include>**/*.*</include>
 				</includes>
 			</resource>
 		</resources>

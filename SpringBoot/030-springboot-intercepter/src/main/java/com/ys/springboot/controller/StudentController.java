@@ -35,7 +35,7 @@ public class StudentController {
         return "out massage";
     }
 
-    //如果用户未登录访问了需要登录才能访问的资源，则跳转至error
+    //如果用户未登录，却访问了需要登录才能访问的资源，则跳转至error
     @RequestMapping(value = "/error")
     @ResponseBody
     public String error() {

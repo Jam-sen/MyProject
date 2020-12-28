@@ -31,7 +31,8 @@ public class StudentController {
     }
 
     @PutMapping(value = "/student/{id}/{name}/{age}")
-    public Student update(@PathVariable Integer id, @PathVariable String name, @PathVariable Integer age) {
+    public Student update(@PathVariable Integer id, @PathVariable String name,
+                          @PathVariable Integer age) {
         Student student = new Student();
         student.setId(id);
         student.setName(name);

@@ -9,7 +9,9 @@ import org.springframework.context.annotation.Configuration;
 public class FilterConfig {
     @Bean
     public FilterRegistrationBean myFilterRegistrationBean() {
+        //注册过滤器
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new MyFilter());
+        //添加需要过滤的请求路径
         filterRegistrationBean.addUrlPatterns("/user/*");
         return filterRegistrationBean;
     }

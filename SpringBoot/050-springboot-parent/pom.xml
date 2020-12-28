@@ -10,7 +10,7 @@
         <version>2.4.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.ys.springboot</groupId>
+    <groupId>com.ys.springboot</groupId>
     <artifactId>050-springboot-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>

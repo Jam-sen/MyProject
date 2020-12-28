@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class StudentController {
-    @Reference(interfaceClass = StudentService.class,version = "1.0.0")
+    @Reference(interfaceClass = StudentService.class, version = "1.0.0")
     private StudentService studentService;
+
     @RequestMapping(value = "/student/count")
     @ResponseBody
     public String StudentCount() {
