@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>工作页面</title>
+</head>
+<body>
+<h1 th:text="'登录状态：'+${#httpSession.getAttribute('登录状态')}"></h1>
+    <a th:href="'student/detail/'+${id}" th:text="'查看'+${id}+'详细信息'"></a>
+</body>
+</html>
