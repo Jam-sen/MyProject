@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ys.springcloud</groupId>
-	<artifactId>02-springcloud-provider</artifactId>
+	<artifactId>01-springcloud-provider</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>02-springcloud-provider</name>
+	<name>01-springcloud-provider</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

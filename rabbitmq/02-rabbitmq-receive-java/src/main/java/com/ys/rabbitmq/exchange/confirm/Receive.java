@@ -44,7 +44,6 @@ public class Receive {
                 public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                     /**
                      * 获取当前消息是否被接收过一次，如果返回false表示消息之前没有被接收过，返回true则表示这个消息之前被接收过，可能也处理完成。因此我们要进行消息的防重复处理。
-                     *
                      */
                     boolean isRedeliver = envelope.isRedeliver();
                     System.out.println("当前消息是否被接收过一次：" + isRedeliver);

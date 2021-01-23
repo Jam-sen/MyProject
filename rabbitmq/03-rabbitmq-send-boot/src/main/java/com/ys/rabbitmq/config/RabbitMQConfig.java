@@ -7,12 +7,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQConfig {
     //配置一个direct类型的交换机
+    //@Bean 用于模拟Spring配置文件中的<bean>标签，用于创建名字为bootDirectExchange的交换机
     @Bean
     public DirectExchange directExchange() {
         return new DirectExchange("bootDirectExchange");
     }
 
-    //配置一个队列
+    //声明一个队列，队列名为bootDirectQueue
     @Bean
     public Queue directQueue() {
         return new Queue("bootDirectQueue");
@@ -37,6 +38,7 @@ public class RabbitMQConfig {
     }
 
     //配置一个Topic类型的交换机
+    @Bean
     public TopicExchange topicExchange() {
         return new TopicExchange("topicExchange");
     }

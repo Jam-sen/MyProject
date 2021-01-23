@@ -15,22 +15,20 @@ public class MyServiceImpl implements MyService {
     public void sendMessage(String message) {
         /**
          * 发送消息
-         *  参数1：交换机名
-         *  参数2：RoutingKey
-         *  参数3：具体发送的消息数据
+         *  参数1：消息存放的交换机名称 （需要事前创建）
+         *  参数2：RoutingKey，接收者需要根据这个key精准接收消息
+         *  参数3：具体存入队列中的消息数据
          */
-        amqpTemplate.convertAndSend("bootDirectExchange","bootDirectRoutingKey",message);
+        amqpTemplate.convertAndSend("bootDirectExchange", "bootDirectRoutingKey", message);
     }
 
     @Override
     public void sendFanoutMessage(String message) {
-        amqpTemplate.convertAndSend("fanoutExchange","",message);
+        amqpTemplate.convertAndSend("fanoutExchange", "", message);
     }
 
     @Override
     public void sendTopicMessage(String message) {
         amqpTemplate.convertAndSend("topicExchange", "aa.bb.cc", message);
     }
-
-
 }

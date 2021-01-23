@@ -18,6 +18,7 @@ public class MyServiceImpl implements MyService {
     //这个接收不是不间断的接收消息，每执行一次这个方法只能接收一次消息，如果有新消息进入则不会自动接收消息，不建议使用这种方法
     @Override
     public void receive() {
+        //参数String指定要接收消息的队列名
         String message = (String) amqpTemplate.receiveAndConvert("bootDirectQueue");
         System.out.println(message);
     }

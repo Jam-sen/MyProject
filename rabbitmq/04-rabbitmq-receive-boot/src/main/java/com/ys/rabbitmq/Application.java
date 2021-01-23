@@ -12,7 +12,7 @@ public class Application {
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(Application.class, args);
 		MyService myService = (MyService) applicationContext.getBean("myServiceImpl");
 		//使用了消息监听器接收消息，就不需要调用接收方法来接收消息
-//		myService.receive();
+		//myService.receive();
 	}
 
 }

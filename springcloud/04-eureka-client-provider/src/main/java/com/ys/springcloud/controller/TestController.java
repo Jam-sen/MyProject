@@ -9,5 +9,4 @@ public class TestController {
     public String test() {
         return "使用了Eureka的服务提供者";
     }
-
 }

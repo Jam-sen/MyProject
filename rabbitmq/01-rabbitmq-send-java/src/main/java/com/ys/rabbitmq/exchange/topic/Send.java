@@ -20,9 +20,7 @@ public class Send {
             connection = connectionFactory.newConnection();
             channel = connection.createChannel();
             /**
-             * 由于使用Fanout类型的交换机，因此消息的接收方肯能会有多个因此不建议在消息发送时来创建队列
-             * 以及绑定交换机，建议在消费者中创建队列并绑定交换机
-             * 但是发送消息时至少应该确保交换机时存在
+             * 由于使用topic类型的交换机，因此消息的接收方可能会有多个，因此不建议在消息发送时来创建队列以及绑定交换机，建议在消费者中创建队列并绑定交换机，但是发送消息时至少应该确保交换机时存在
              */
             channel.exchangeDeclare("topicExchange", "topic", true);
 

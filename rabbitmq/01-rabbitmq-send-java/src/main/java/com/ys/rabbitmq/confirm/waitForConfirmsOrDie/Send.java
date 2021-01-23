@@ -44,6 +44,7 @@ public class Send {
         } catch (TimeoutException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
+            //在此处进行消息补发
             e.printStackTrace();
         } finally {
             if (channel != null) {
