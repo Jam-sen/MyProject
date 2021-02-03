@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<h1 shiro:authenticated="true">登录成功！</h1>
+<h1 shiro:guest="true">欢迎访客进入！</h1><br/>
+
+<shiro:authenticated>
+    <a href="/admin/test">请求/admin/test</a><br/>
+    <a href="/user/test">请求/user/test</a><br>
+    <a href="/add">请求/add</a><br>
+    <a href="/delete">请求/delete</a>
+</shiro:authenticated>
+<hr>
+
+<a href="/logout">登出</a>
+</body>
+</html>
