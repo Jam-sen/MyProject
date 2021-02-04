@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/002-maven-java/002-maven-java.iml" filepath="$PROJECT_DIR$/002-maven-java/002-maven-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/003-maven-web/003-maven-web.iml" filepath="$PROJECT_DIR$/003-maven-web/003-maven-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/004-maven-parent/004-maven-parent.iml" filepath="$PROJECT_DIR$/004-maven-parent/004-maven-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/005-maven-java/005-maven-java.iml" filepath="$PROJECT_DIR$/005-maven-java/005-maven-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-maven-parent/01-maven-parent.iml" filepath="$PROJECT_DIR$/01-maven-parent/01-maven-parent.iml" />
+    </modules>
+  </component>
+</project>

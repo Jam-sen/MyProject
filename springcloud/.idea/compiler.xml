@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="17-eureka-client-hystrix-provider" />
+        <module name="23-eureka-client-zuul-consumer" />
+        <module name="14-rest-template-provider" />
+        <module name="08-eureka-client-provider" />
+        <module name="07-eureka-server-9002" />
+        <module name="13-eureka-client-ribbon-consumer" />
+        <module name="12-eureka-client-ribbon-provider8082" />
+        <module name="11-eureka-client-ribbon-provider8081" />
+        <module name="06-eureka-server-9001" />
+        <module name="22-eureka-client-feign-provider" />
+        <module name="26-eureka-client-zuul-gateway" />
+        <module name="02-springcloud-consumer" />
+        <module name="21-eureka-client-feign-consumer" />
+        <module name="09-eureka-client-consumer" />
+        <module name="19-hystrix-dashboard" />
+        <module name="10-eureka-server-ribbon" />
+        <module name="03-eureka-server" />
+        <module name="05-eureka-client-consumer" />
+        <module name="15-rest-template-consumer" />
+        <module name="01-springcloud-provider" />
+        <module name="16-eureka-client-hystrix-consumer" />
+        <module name="24-eureka-client-zuul-provider" />
+        <module name="04-eureka-client-provider" />
+        <module name="18-eureka-server-hystrix" />
+        <module name="25-eureka-server-zuul" />
+        <module name="20-eureka-server-feign" />
+        <module name="10-eureka-client-consumer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="01-springcloud-provider" target="11" />
+      <module name="02-springcloud-consumer" target="11" />
+      <module name="03-eureka-server" target="11" />
+      <module name="04-eureka-client-provider" target="11" />
+      <module name="05-eureka-client-consumer" target="11" />
+      <module name="06-eureka-server-9001" target="11" />
+      <module name="07-eureka-server-9002" target="11" />
+      <module name="08-eureka-client-provider" target="11" />
+      <module name="09-eureka-client-consumer" target="11" />
+      <module name="10-eureka-client-consumer" target="11" />
+      <module name="10-eureka-server-ribbon" target="11" />
+      <module name="11-eureka-client-ribbon-provider8081" target="11" />
+      <module name="12-eureka-client-ribbon-provider8082" target="11" />
+      <module name="13-eureka-client-ribbon-consumer" target="11" />
+      <module name="14-rest-template-provider" target="11" />
+      <module name="15-rest-template-consumer" target="11" />
+      <module name="16-eureka-client-hystrix-consumer" target="11" />
+      <module name="17-eureka-client-hystrix-provider" target="11" />
+      <module name="18-eureka-server-hystrix" target="11" />
+      <module name="19-hystrix-dashboard" target="11" />
+      <module name="20-eureka-server-feign" target="11" />
+      <module name="21-eureka-client-feign-consumer" target="11" />
+      <module name="22-eureka-client-feign-provider" target="11" />
+      <module name="23-eureka-client-zuul-consumer" target="11" />
+      <module name="24-eureka-client-zuul-provider" target="11" />
+      <module name="25-eureka-server-zuul" target="11" />
+      <module name="26-eureka-client-zuul-gateway" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="01-springcloud-provider" options="-parameters" />
+      <module name="02-springcloud-consumer" options="-parameters" />
+      <module name="03-eureka-server" options="-parameters" />
+      <module name="04-eureka-client-provider" options="-parameters" />
+      <module name="05-eureka-client-consumer" options="-parameters" />
+      <module name="06-eureka-server-9001" options="-parameters" />
+      <module name="07-eureka-server-9002" options="-parameters" />
+      <module name="08-eureka-client-provider" options="-parameters" />
+      <module name="09-eureka-client-consumer" options="-parameters" />
+      <module name="10-eureka-client-consumer" options="-parameters" />
+      <module name="10-eureka-server-ribbon" options="-parameters" />
+      <module name="11-eureka-client-ribbon-provider8081" options="-parameters" />
+      <module name="12-eureka-client-ribbon-provider8082" options="-parameters" />
+      <module name="13-eureka-client-ribbon-consumer" options="-parameters" />
+      <module name="14-rest-template-provider" options="-parameters" />
+      <module name="15-rest-template-consumer" options="-parameters" />
+      <module name="16-eureka-client-hystrix-consumer" options="-parameters" />
+      <module name="17-eureka-client-hystrix-provider" options="-parameters" />
+      <module name="18-eureka-server-hystrix" options="-parameters" />
+      <module name="19-hystrix-dashboard" options="-parameters" />
+      <module name="20-eureka-server-feign" options="-parameters" />
+      <module name="21-eureka-client-feign-consumer" options="-parameters" />
+      <module name="22-eureka-client-feign-provider" options="-parameters" />
+      <module name="23-eureka-client-zuul-consumer" options="-parameters" />
+      <module name="24-eureka-client-zuul-provider" options="-parameters" />
+      <module name="25-eureka-server-zuul" options="-parameters" />
+      <module name="26-eureka-client-zuul-gateway" options="-parameters" />
+    </option>
+  </component>
+</project>

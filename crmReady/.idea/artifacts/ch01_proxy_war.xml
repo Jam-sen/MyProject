@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ch01-proxy:war">
+    <output-path>$PROJECT_DIR$/ch01-proxy/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ch01-proxy</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ch01-proxy-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ch01-proxy:war exploded" />
+    </root>
+  </artifact>
+</component>

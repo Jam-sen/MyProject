@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/003-maven-web" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../01-maven-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/01-maven-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/002-maven-java/pom.xml" />
+        <option value="$PROJECT_DIR$/004-maven-parent/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/004-maven-parent/005-maven-java/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

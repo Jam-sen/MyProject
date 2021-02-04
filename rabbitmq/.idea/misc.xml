@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/01-rabbitmq-send-java/pom.xml" />
+        <option value="$PROJECT_DIR$/02-rabbitmq-receive/pom.xml" />
+        <option value="$PROJECT_DIR$/02-rabbitmq-receive-java/pom.xml" />
+        <option value="$PROJECT_DIR$/03-rabbitmq-send-boot/pom.xml" />
+        <option value="$PROJECT_DIR$/04-rabbitmq-receive-boot/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

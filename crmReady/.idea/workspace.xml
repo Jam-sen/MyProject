@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:gitee" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0db9a0fc-925b-4018-9011-5ca356dd4661" name="Default Changelist" comment="crmReady">
+      <change beforePath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/java/com/ys/crm/workbench/dao/TranDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/java/com/ys/crm/workbench/dao/TranDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/java/com/ys/crm/workbench/dao/TranDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/java/com/ys/crm/workbench/dao/TranDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/java/com/ys/crm/workbench/service/TranService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/java/com/ys/crm/workbench/service/TranService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/java/com/ys/crm/workbench/service/impl/TranServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/java/com/ys/crm/workbench/service/impl/TranServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/java/com/ys/crm/workbench/web/controller/TranController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/java/com/ys/crm/workbench/web/controller/TranController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/webapp/workbench/chart/transaction/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/webapp/workbench/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/webapp/workbench/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/webapp/workbench/transaction/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../workspaceForCrm/crm/src/main/webapp/workbench/transaction/detail.jsp" afterDir="false" />
+    </list>
+    <list id="9a8db447-e5dc-4a3f-b478-b4da47794740" name="crmReady" comment="撤销" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="mybatis-config" />
+        <option value="mybatis-mapper" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="11" />
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="1jzWvtTepoT18Si9T52vg3gnlRM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ChangesTree.GroupingKeys" value="directory" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17285156" />
+    <property name="project.structure.side.proportion" value="0.4066194" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ch01-proxy/target/classes" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ch01-proxy/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ys.util" />
+      <recent name="com.ys" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ys.service.impl" />
+      <recent name="com.ys.dao.impl" />
+      <recent name="com.ys.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Test (1)">
+    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ys.test.Test" />
+      <module name="ch02-mybatis-proxy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ys.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ys.test.Test" />
+      <module name="ch01-proxy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ys.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ys.test" />
+      <module name="ch01-proxy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ys.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test2.io" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ch01-proxy" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test2" />
+      <option name="METHOD_NAME" value="io" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ch01-proxy" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="crmReady" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="crmReady" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test (1)" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="JUnit.test.test1" />
+        <item itemvalue="JUnit.test2.io" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0db9a0fc-925b-4018-9011-5ca356dd4661" name="Default Changelist" comment="" />
+      <changelist id="9a8db447-e5dc-4a3f-b478-b4da47794740" name="crmReady" comment="撤销" />
+      <created>1604807637834</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604807637834</updated>
+      <workItem from="1604807639303" duration="614000" />
+      <workItem from="1604808261459" duration="2680000" />
+      <workItem from="1604814552786" duration="8474000" />
+      <workItem from="1604823954244" duration="2041000" />
+      <workItem from="1604832103528" duration="2896000" />
+      <workItem from="1604843228472" duration="3659000" />
+      <workItem from="1604847244015" duration="4095000" />
+      <workItem from="1604853858196" duration="4348000" />
+      <workItem from="1604884617941" duration="3251000" />
+      <workItem from="1604887962665" duration="4893000" />
+      <workItem from="1604973797722" duration="7803000" />
+      <workItem from="1605059258160" duration="5426000" />
+      <workItem from="1606735076426" duration="389000" />
+    </task>
+    <task id="LOCAL-00001" summary="crmReady">
+      <created>1605064991343</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605064991343</updated>
+    </task>
+    <task id="LOCAL-00002" summary="crmReady">
+      <created>1605066863305</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605066863305</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_DETAILS" value="true" />
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/apple/IdeaProjects/crmReady/ch02-mybatis-proxy" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="crmReady" />
+    <option name="LAST_COMMIT_MESSAGE" value="crmReady" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="115" width="800" height="765" key="#Intentions" timestamp="1604851695868">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" width="800" height="765" key="#Intentions/0.0.1440.900@0.0.1440.900" timestamp="1604851695868" />
+    <state x="208" y="31" key="#Project_Structure" timestamp="1604807774147">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="208" y="31" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1604807774147" />
+    <state x="83" y="286" key="#SQL_Dialects" timestamp="1604885296045">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="83" y="286" key="#SQL_Dialects/0.0.1440.900@0.0.1440.900" timestamp="1604885296045" />
+    <state x="320" y="115" width="1071" height="748" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604990661367">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" width="1071" height="748" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1604990661367" />
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1604995584050">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1604995584050" />
+    <state x="412" y="395" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath" timestamp="1604808740009">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="412" y="395" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath/0.0.1440.900@0.0.1440.900" timestamp="1604808740009" />
+    <state x="168" y="79" width="1152" height="720" key="DiffContextDialog" timestamp="1605066818242">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="168" y="79" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1605066818242" />
+    <state x="168" y="79" width="1152" height="720" key="DiffContextDialog/0.0.1440.900@0.23.1440.831" timestamp="1605066186358" />
+    <state x="168" y="79" width="1152" height="720" key="DiffContextDialog/0.23.1440.831@0.23.1440.831" timestamp="1605066487073" />
+    <state x="491" y="324" key="Github.CreatePullRequestDialog" timestamp="1605060152216">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="491" y="324" key="Github.CreatePullRequestDialog/0.0.1440.900@0.0.1440.900" timestamp="1605060152216" />
+    <state width="1398" height="182" key="GridCell.Tab.0.bottom" timestamp="1605009895940">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state width="1398" height="246" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604996568084" />
+    <state width="1398" height="182" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1605009895940" />
+    <state width="1398" height="182" key="GridCell.Tab.0.center" timestamp="1605009895938">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state width="1398" height="246" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1604996568083" />
+    <state width="1398" height="182" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1605009895938" />
+    <state width="1398" height="182" key="GridCell.Tab.0.left" timestamp="1605009895936">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state width="1398" height="246" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1604996568082" />
+    <state width="1398" height="182" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1605009895936" />
+    <state width="1398" height="182" key="GridCell.Tab.0.right" timestamp="1605009895939">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state width="1398" height="246" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1604996568083" />
+    <state width="1398" height="182" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1605009895939" />
+    <state width="1398" height="182" key="GridCell.Tab.1.bottom" timestamp="1605009895944">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state width="1398" height="182" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604995831616" />
+    <state width="1398" height="182" key="GridCell.Tab.1.bottom/0.23.1440.831@0.23.1440.831" timestamp="1605009895944" />
+    <state width="1398" height="182" key="GridCell.Tab.1.center" timestamp="1605009895942">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state width="1398" height="182" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1604995831615" />
+    <state width="1398" height="182" key="GridCell.Tab.1.center/0.23.1440.831@0.23.1440.831" timestamp="1605009895942" />
+    <state width="1398" height="182" key="GridCell.Tab.1.left" timestamp="1605009895941">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state width="1398" height="182" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1604995831615" />
+    <state width="1398" height="182" key="GridCell.Tab.1.left/0.23.1440.831@0.23.1440.831" timestamp="1605009895941" />
+    <state width="1398" height="182" key="GridCell.Tab.1.right" timestamp="1605009895943">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state width="1398" height="182" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1604995831616" />
+    <state width="1398" height="182" key="GridCell.Tab.1.right/0.23.1440.831@0.23.1440.831" timestamp="1605009895943" />
+    <state x="361" y="145" key="NewModule_or_Project.wizard" timestamp="1604885137584">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="361" y="145" key="NewModule_or_Project.wizard/0.0.1440.900@0.0.1440.900" timestamp="1604885137584" />
+    <state x="416" y="159" key="RollbackChangesDialog" timestamp="1605066833224">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="416" y="159" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605066833224" />
+    <state x="214" y="22" width="1024" height="831" key="SettingsEditor" timestamp="1605075819073">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="214" y="22" width="1024" height="831" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605075819073" />
+    <state x="234" y="44" key="SettingsEditor/0.23.1440.831@0.23.1440.831" timestamp="1605075706419" />
+    <state x="571" y="370" key="VCS.ChangelistChooser" timestamp="1605066750117">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="571" y="370" key="VCS.ChangelistChooser/0.0.1440.900@0.0.1440.900" timestamp="1605066750117" />
+    <state x="318" y="167" key="Vcs.Push.Dialog.v2" timestamp="1605066979961">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="318" y="167" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605066979961" />
+    <state x="507" y="235" key="chooseDestDirectoryDialog" timestamp="1604819596009">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="507" y="235" key="chooseDestDirectoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1604819596009" />
+    <state x="563" y="325" width="346" height="250" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604995055048">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="563" y="325" width="346" height="250" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1440.900@0.0.1440.900" timestamp="1604995055048" />
+    <state x="549" y="273" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1604994715744">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="549" y="273" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1604994715744" />
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1605066186359">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1440.831@0.23.1440.831" timestamp="1605066186359" />
+    <state x="518" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605065450979">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="518" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1605065450979" />
+    <state x="259" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1604891471445">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="259" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.900@0.0.1440.900" timestamp="1604891471445" />
+    <state x="573" y="365" key="git4idea.rebase.GitUnstructuredEditor" timestamp="1605066471062">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="573" y="365" key="git4idea.rebase.GitUnstructuredEditor/0.0.1440.900@0.0.1440.900" timestamp="1605066471062" />
+    <state x="497" y="336" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1605066975145">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="497" y="336" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605066975145" />
+    <state x="531" y="351" key="git4idea.ui.GitResetDialog" timestamp="1605066354156">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="531" y="351" key="git4idea.ui.GitResetDialog/0.0.1440.900@0.0.1440.900" timestamp="1605066354156" />
+    <state width="600" height="321" key="javadoc.popup" timestamp="1604851995731">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="600" height="321" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1604851995731" />
+    <state x="88" y="72" key="new project wizard" timestamp="1604884989632">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="88" y="72" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1604884989632" />
+    <state x="385" y="210" width="670" height="675" key="run.anything.popup" timestamp="1604833318624">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1604833318624" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1604995330157">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1604995330157" />
+    <state x="116" y="213" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1605065070352">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="116" y="213" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1440.900@0.0.1440.900" timestamp="1605065070352" />
+  </component>
+</project>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ys</groupId>
+    <artifactId>01-maven-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>../002-maven-java</module>
+        <module>../003-maven-web</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <!--
+        maven父工程必须遵循两点要求
+        1.packaging标签的文本内容必须设置为pom
+        2.将src目录删除掉
+       
+    -->
+    <!--
+        pom是项目对象模型（Project Object Model），该文件是可以被继承的。
+        maven多模块管理，其实就是让他的子模块的pom文件来继承父工程的pom文件
+    -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.21</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

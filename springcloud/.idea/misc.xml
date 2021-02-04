@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/01-springcloud-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/02-springcloud-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/03-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/04-eureka-client-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/05-eureka-client-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/06-eureka-server-9001/pom.xml" />
+        <option value="$PROJECT_DIR$/07-eureka-server-9002/pom.xml" />
+        <option value="$PROJECT_DIR$/08-eureka-client-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/09-eureka-client-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/10-eureka-server-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/11-eureka-client-ribbon-provider8081/pom.xml" />
+        <option value="$PROJECT_DIR$/12-eureka-client-ribbon-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/13-eureka-client-ribbon-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/12-eureka-client-ribbon-provider8082/pom.xml" />
+        <option value="$PROJECT_DIR$/14-rest-template-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/15-rest-template-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/16-eureka-client-hystrix-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/16-eureka-client-hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/17-eureka-client-hystrix-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/18-eureka-server-hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/19-hystrix-dashboard/pom.xml" />
+        <option value="$PROJECT_DIR$/20-eureka-server-fegin/pom.xml" />
+        <option value="$PROJECT_DIR$/21-eureka-client-fegin-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/22-eureka-client-fegin-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/22-eureka-client-feign-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/21-eureka-client-feign-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/20-eureka-server-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/24-eureka-client-zuul-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/23-eureka-client-zuul-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/25-eureka-server-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/26-eureka-client-zuul-geteway/pom.xml" />
+        <option value="$PROJECT_DIR$/26-eureka-client-zuul-gateway/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

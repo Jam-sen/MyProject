@@ -1,0 +1,7 @@
+com/ys/test/Test.class
+com/ys/util/MybatisUtil.class
+com/ys/service/StudentService.class
+com/ys/domain/Student.class
+com/ys/dao/StudentDao.class
+com/ys/service/impl/StudentServiceImpl.class
+com/ys/handler/MyInvocationHandler.class

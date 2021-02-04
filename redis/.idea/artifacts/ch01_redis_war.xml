@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ch01-redis:war">
+    <output-path>$PROJECT_DIR$/ch01-redis/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ch01-redis</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ch01-redis.war">
+      <element id="artifact" artifact-name="ch01-redis:war exploded" />
+    </root>
+  </artifact>
+</component>
