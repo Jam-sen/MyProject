@@ -23,8 +23,8 @@ public class JsoupUtil {
         for (Element li : liList) {
             Elements name = li.getElementsByClass("p-name");
             String img = li.getElementsByTag("img").attr("source-data-lazy-advertisement");
-//            System.out.println(name.text());
-            System.out.println(img);
+            System.out.println(name.text());
+//            System.out.println(img);
             list.add(name.text());
         }
         return list;

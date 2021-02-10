@@ -5,6 +5,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>online_education_service</module>
+        <module>common</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
