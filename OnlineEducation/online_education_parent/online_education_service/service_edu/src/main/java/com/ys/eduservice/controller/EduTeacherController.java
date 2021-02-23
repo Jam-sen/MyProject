@@ -6,7 +6,6 @@ import com.ys.common.utils.R;
 import com.ys.eduservice.entity.EduTeacher;
 import com.ys.eduservice.entity.vo.TeacherQuery;
 import com.ys.eduservice.service.EduTeacherService;
-import com.ys.exception.CustomException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -27,6 +26,7 @@ import java.util.List;
 @Api(tags = {"讲师管理"})
 @RestController
 @RequestMapping("/eduservice/teacher")
+@CrossOrigin
 public class EduTeacherController {
     @Autowired
     private EduTeacherService eduTeacherService;
@@ -34,11 +34,6 @@ public class EduTeacherController {
     @ApiOperation(value = "查出所有讲师", tags = "查出所有讲师")
     @GetMapping("/selectAll")
     public R selectAll() {
-        try {
-            System.out.println(10/0);
-        } catch (Exception e) {
-            throw new CustomException("自定义异常执行", 20001);
-        }
         List<EduTeacher> list = eduTeacherService.list(null);
         return list != null ? R.ok().data("list", list) : R.error();
     }
@@ -71,12 +66,12 @@ public class EduTeacherController {
     @ApiOperation("添加讲师")
     @PostMapping("/addTeacher")
     public R addTeacher(@RequestBody EduTeacher eduTeacher) {
-        return eduTeacherService.save(eduTeacher) ? R.ok() : R.error();
+        return eduTeacherService.save(eduTeacher)? R.ok():R.error();
     }
 
     @ApiOperation("根据id查询讲师")
     @PostMapping("/selectById/{id}")
-    public R selectById(String id) {
+    public R selectById(@PathVariable String id) {
         EduTeacher teacher = eduTeacherService.getById(id);
         return teacher != null ? R.ok().data("teacher",teacher) : R.error();
     }

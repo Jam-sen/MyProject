@@ -5,9 +5,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import javax.print.DocFlavor;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -22,10 +19,13 @@ public class JsoupUtil {
         List<String> list = new ArrayList<>();
         for (Element li : liList) {
             Elements name = li.getElementsByClass("p-name");
-            String img = li.getElementsByTag("img").attr("source-data-lazy-advertisement");
-            System.out.println(name.text());
-//            System.out.println(img);
-            list.add(name.text());
+            Elements a = li.getElementsByTag("a");
+            String href = a.attr("href");
+//            String img = li.getElementsByTag("img").attr("source-data-lazy-advertisement");
+            String name1 = name.text();
+            if (name1!=null&&!"".equals(name1)) {
+                list.add(name1+"--->>> https:"+href);
+            }
         }
         return list;
     }

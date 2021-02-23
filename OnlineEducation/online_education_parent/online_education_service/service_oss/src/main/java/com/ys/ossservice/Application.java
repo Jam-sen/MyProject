@@ -1,12 +1,11 @@
-package com.ys.eduservice;
+package com.ys.ossservice;
 
-import com.ys.eduservice.mapper.EduSubjectMapper;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @ComponentScan(basePackages = {"com.ys"})
 public class Application {
     public static void main(String[] args) {

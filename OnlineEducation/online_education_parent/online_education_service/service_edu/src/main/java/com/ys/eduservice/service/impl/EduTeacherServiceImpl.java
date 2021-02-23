@@ -1,17 +1,15 @@
 package com.ys.eduservice.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ys.common.utils.R;
 import com.ys.eduservice.entity.EduTeacher;
 import com.ys.eduservice.entity.vo.TeacherQuery;
 import com.ys.eduservice.mapper.EduTeacherMapper;
 import com.ys.eduservice.service.EduTeacherService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
-import javax.management.Query;
 import java.util.List;
 
 /**
