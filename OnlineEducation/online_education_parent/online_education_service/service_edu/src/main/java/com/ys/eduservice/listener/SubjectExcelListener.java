@@ -25,14 +25,14 @@ public class SubjectExcelListener extends AnalysisEventListener<SubjectData> {
             throw new CustomException("文件数据为空", 20001);
         }
         //一行一行读取，每次读取有两个值，第一个值是一级分类，第二个值是二级分类
-        EduSubject eduSubject = existSubject(subjectData.getOneSubjectName(), "0");
+        EduSubject eduSubject = this.existSubject(subjectData.getOneSubjectName(), "0");
         if (eduSubject==null) {
             eduSubject = new EduSubject();
             eduSubject.setParentId("0").setTitle(subjectData.getOneSubjectName());
             eduSubjectService.save(eduSubject);
         }
 
-        EduSubject eduSubject1 = existSubject(subjectData.getTwoSubjectName(), eduSubject.getId());
+        EduSubject eduSubject1 = this.existSubject(subjectData.getTwoSubjectName(), eduSubject.getId());
         if (eduSubject1==null) {
             eduSubject1 = new EduSubject();
             eduSubject1.setTitle(subjectData.getTwoSubjectName()).setParentId(eduSubject.getId());

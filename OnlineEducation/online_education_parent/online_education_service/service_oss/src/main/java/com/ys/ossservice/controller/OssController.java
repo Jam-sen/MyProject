@@ -19,10 +19,11 @@ public class OssController {
     private OssService ossService;
 
     //上传头像的方法
-    @PostMapping("uploadFile")
+    @PostMapping("/uploadFile")
     public R uploadOssFile(MultipartFile file) {
         //获取上传的文件
         String url = ossService.uploadFileAvatar(file);
         return R.ok().data("url", url);
     }
+
 }

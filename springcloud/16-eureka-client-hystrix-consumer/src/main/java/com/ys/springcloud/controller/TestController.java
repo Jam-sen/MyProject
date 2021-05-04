@@ -72,6 +72,12 @@ public class TestController {
         return "带有Hystrix的服务消费者test05--->"+result;
     }
 
+    @RequestMapping("/test06")
+    public String test06() {
+        String result = restTemplate.getForObject("http://17-eureka-client-hystrix-provider/test06", String.class);
+        return "带有Hystrix的服务消费者test06--->" + result;
+    }
+
 
     /**
      * 降级方法：

@@ -2,15 +2,11 @@ package com.ys.eduservice.controller;
 
 
 import com.ys.common.utils.R;
-import com.ys.eduservice.entity.excel.SubjectData;
+import com.ys.eduservice.entity.vo.SubjectListData;
 import com.ys.eduservice.service.EduSubjectService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -37,6 +33,12 @@ public class EduSubjectController {
     public R addSubject(MultipartFile file) {
         eduSubjectService.addSubject(file);
         return R.ok();
+    }
+
+    @GetMapping("/getAllSubject")
+    public R getAllSubject() {
+        List<SubjectListData> data = eduSubjectService.getAllSubject();
+        return R.ok().data("items", data);
     }
 }
 

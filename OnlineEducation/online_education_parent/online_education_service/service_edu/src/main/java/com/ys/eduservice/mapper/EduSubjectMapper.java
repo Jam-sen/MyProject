@@ -14,5 +14,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface EduSubjectMapper extends BaseMapper<EduSubject> {
-
+    String getParentIdByChildrenId(String subjectId);
 }

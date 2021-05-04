@@ -13,7 +13,6 @@ public class TestController {
     private RestTemplate restTemplate;
     @RequestMapping("/test")
     public String test() {
-
         ResponseEntity<String> forEntity = restTemplate.getForEntity("http://08-EUREKA-CLIENT-PROVIDER/test", String.class);
         String result = forEntity.getBody();
         return "使用了Eureka的服务消费者-->"+result;
