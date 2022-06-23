@@ -10,7 +10,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.concurrent.Callable;
+
+//import StringUtils;
 
 @Slf4j
 @Controller
@@ -19,23 +23,20 @@ public class CallableController {
     @Autowired
     private CallableService callableService;
 
-    @RequestMapping(value = "/")
+    @RequestMapping(value = "/xlbb_search")
     @ResponseBody
-    public Callable<ResValue<Object>> getValue() {
-        log.info(Thread.currentThread().getName()+"线程开始");
-
-        Callable<ResValue<Object>> result = (() -> {
-            return callableService.searchBigData();
+    public Callable<ResValue<ArrayList<HashMap<String, Object>>>> getValue(String phone, String address, String startDate, String endDate) {
+        Callable<ResValue<ArrayList<HashMap<String, Object>>>> result = (() -> {
+            return callableService.searchBigData(phone, address, startDate, endDate);
         });
-        log.info(Thread.currentThread().getName()+"线程结束");
         return result;
     }
 
-    @RequestMapping(value = "/b")
-    @ResponseBody
-    public ResValue<Object> getValue1() {
-        return callableService.searchBigData();
-    }
+//    @RequestMapping(value = "/b")
+//    @ResponseBody
+//    public ResValue<Object> getValue1() {
+//        return callableService.searchBigData();
+//    }
 
     @RequestMapping(value = "/a")
     @ResponseBody

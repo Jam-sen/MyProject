@@ -2,3 +2,8 @@ spring:
   mvc:
     async:
       request-timeout: 5000000
+  datasource:
+    url: jdbc:oracle:thin:@//120.27.131.238:1521/xe
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: ys
+    password: 123456

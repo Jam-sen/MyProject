@@ -2,8 +2,9 @@ package com.ys.callable.service;
 
 import com.ys.callable.domain.ResValue;
 
-import java.util.concurrent.Callable;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public interface CallableService {
-    ResValue<Object> searchBigData();
+    ResValue<ArrayList<HashMap<String, Object>>> searchBigData(String phone, String address, String startDate, String endDate);
 }
