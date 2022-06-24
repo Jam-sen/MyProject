@@ -10,6 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.Callable;
@@ -26,11 +29,14 @@ public class CallableController {
     @RequestMapping(value = "/xlbb_search")
     @ResponseBody
     public Callable<ResValue<ArrayList<HashMap<String, Object>>>> getValue(String phone, String address, String startDate, String endDate) {
+
         Callable<ResValue<ArrayList<HashMap<String, Object>>>> result = (() -> {
             return callableService.searchBigData(phone, address, startDate, endDate);
         });
         return result;
     }
+
+
 
 //    @RequestMapping(value = "/b")
 //    @ResponseBody
@@ -44,4 +50,5 @@ public class CallableController {
         return "成功a";
 
     }
+
 }

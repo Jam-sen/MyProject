@@ -3,6 +3,7 @@ package com.ys.callable.service.impl;
 import com.ys.callable.dao.CallableDao;
 import com.ys.callable.domain.ResValue;
 import com.ys.callable.service.CallableService;
+import com.ys.callable.tools.ManageTools;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +30,7 @@ public class CallableServiceImpl implements CallableService {
                 ArrayList<HashMap<String, Object>> list = callableDao.selectXlbbByAddressAndDate(address, startDate, endDate);
                 resValue = new ResValue<>("通过地址和扫码时间段进行查询", "100", list);
             } else {
-                resValue.setMsg("参数不全");
+                resValue.setMsg(ManageTools.getIpAddress());
             }
         }
         log.info("查询结束");
